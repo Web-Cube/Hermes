@@ -1,0 +1,79 @@
+.swiper {
+	&-wrapper {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		display: flex;
+		transition-property: transform;
+		transform: translate3d(0px, 0, 0);
+	}
+	&-slide {
+		flex-shrink: 0;
+		min-height: 100%;
+		position: relative;
+	}
+	&-navigation {
+		display: flex;
+		position: absolute;
+	}
+	&-button {
+		&-prev, &-next {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+			z-index: 50;
+			width: 80rem;
+			height: 80rem;
+			cursor: pointer;
+			transition: ease .2s;
+			fill: $black;
+			border: 1px solid #ADABA8;
+			border-radius: 100%;
+			svg {
+				width: 42rem;
+				height: 20rem;
+			}
+			&:hover {
+				fill: #fff;
+				background: $black;
+				border-color: transparent;
+			}
+
+			@include large-mobile {
+				width: 42rem;
+				height: 42rem;
+				border: none;
+				background: none;
+				&:hover {
+					fill: $orange;
+					background: none;
+				}
+			}
+		}
+		&-next {
+			margin-left: 16rem;
+		}
+	}
+	&-progress {
+		height: 4px;
+		background: #E6E9EF;
+		margin-top: 38rem;
+		&-load {
+			background: $red;
+			transition: ease .2s;
+			height: 4px;
+			width: 0;
+		}
+
+		@include large-mobile {
+			margin-top: 30px;
+		}
+	}
+	&-counter {
+		font-size: 18rem;
+		font-weight: 500;
+		letter-spacing: 2rem;
+	}
+}

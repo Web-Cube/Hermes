@@ -1,0 +1,30 @@
+.select {
+	display: inline-flex;
+	position: relative;
+	cursor: pointer;
+	select {
+		display: block;
+		background: none;
+		/* for Firefox */
+		-moz-appearance: none;
+		/* for Chrome */
+		-webkit-appearance: none;
+		font-size: 16rem;
+		line-height: 120%;
+		font-family: inherit;
+		padding: 5rem 28rem 5rem 5rem;
+		border: 0;
+		cursor: pointer;
+		position: relative;
+	}
+
+	&__arrow {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		width: 20rem;
+		height: 20rem;
+		margin-top: -10rem;
+		fill: $orange;
+	}
+}

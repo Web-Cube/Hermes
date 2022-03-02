@@ -1,0 +1,217 @@
+.main {
+	padding: 80rem 0;
+	overflow: hidden;
+
+	@include large-mobile {
+		padding: 50rem 0;
+	}
+
+	&__row {
+		flex-wrap: wrap;
+	}
+
+	&__column {
+		&_left {
+			width: 43%;
+			display: flex;
+    		flex-direction: column;	
+		}
+		&_right {
+			position: relative;
+			width: 57%;
+		}
+
+		@include small-tablet {
+			width: 50%;
+		}
+
+		@include large-mobile {
+			width: 100%;
+			&_left {
+				display: none;
+			}
+		}
+	}
+
+	&__top {
+		flex: 1 0 auto;
+		position: relative;
+		&-item {
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+			transition: ease .3s;
+			&.is-active {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__img {
+		background: #ECE9E3;
+		position: relative;
+		pointer-events: none;
+		&-bg {
+			position: absolute;
+			left: 0;
+			bottom: -39rem;
+			width: 100%;
+			height: 360rem;
+			background: linear-gradient(180deg, #D3CDC3 0%, #ECE9E3 100%);
+			border-radius: 420rem 420rem 0 0;
+			visibility: hidden;
+		}
+		img {
+			mix-blend-mode: darken;
+			position: relative;
+			z-index: 2;
+		}
+
+		@include large-mobile {
+			margin-top: 15rem;
+			padding: 0 15rem;
+			&-bg {
+				display: none;
+			}
+		}
+	}
+
+	&__row {
+		display: flex;
+	}
+
+	&__slider {
+		width: 1152rem;
+		overflow: hidden;
+
+		@include small-tablet {
+			width: 100%;
+		}
+	}
+
+	&__item {
+		width: 366rem;
+		transition: ease .5s;
+		padding-top: 104rem;
+		&-info {
+			display: none;
+		}
+		@include small-tablet {
+			width: 100%;
+			padding-top: 0;
+		}
+		@include large-mobile {
+			&-info {
+				display: block;
+				text-align: center;
+			}
+		}
+	}
+	&__slide {
+		margin-right: 221rem;
+		width: 566rem;
+		min-height: 630rem;
+
+		@include small-tablet {
+			width: 100%;
+			margin-right: 40rem;
+			min-height: inherit;
+		}
+	}
+
+	&__title {
+		margin-left: -6rem;
+	}
+
+	&__category {
+		font-size: 18rem;
+		font-weight: 500;
+		text-transform: uppercase;
+		letter-spacing: 6rem;
+		margin-bottom: 10rem;
+
+		@include large-mobile {
+			font-size: 16rem;
+			letter-spacing: 4rem;
+		}
+	}
+
+	&__price {
+		font-size: 56rem;
+		margin-top: 21rem;
+		line-height: 90%;
+		font-family: 'Forum';
+
+		@include large-mobile {
+			font-size: 40rem;
+			margin-top: 15rem;
+		}
+	}
+
+	&__btn {
+		min-width: 188rem;
+		margin-top: 40rem;
+
+		@include large-mobile {
+			width: 100%;
+			margin-top: 30rem;
+		}
+	}
+	&__swiper-nav {
+		position: absolute;
+		bottom: 0;
+		right: -140rem;
+		@include mackbook {
+			right: 0;
+		}
+		@include small-tablet {
+			bottom: auto;
+			top: 50%;
+			width: 100%;
+			justify-content: space-between;
+		}
+		@include large-mobile {
+			margin-top: 70rem;
+		}
+	}
+	&__counter {
+		position: absolute;
+		top: 0;
+		right: -140rem;
+		@include mackbook {
+			right: 0;
+		}
+
+		@include small-tablet {
+			display: none;
+		}
+	}
+
+	&__content {
+		margin-top: 20rem;
+		display: none;
+		@include large-mobile {
+			display: block;
+		}
+	}
+}
+
+.swiper-slide-active {
+	.main {
+		&__item {
+			width: 566rem;
+			padding-top: 39rem;
+		}
+		&__img-bg {
+			visibility: visible;
+		}
+
+		@include small-tablet {
+			&__item {
+				width: 100%;
+				padding-top: 0;
+			}
+		}
+	}
+}

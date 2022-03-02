@@ -1,0 +1,32 @@
+.form-search {
+	position: relative;
+
+	&__btn {
+		width: 20rem;
+		height: 20rem;
+		position: absolute;
+		left: 0;
+		top: 5rem;
+		background: none;
+		border: 0;
+		cursor: pointer;
+	}
+
+	&__input {
+		padding-left: 28rem;
+		height: 30rem;
+		background: none;
+		border: 0;
+		font-size: 16rem;
+		color: $black;
+		width: 83rem;
+		transition: ease .3s;
+		&::placeholder {
+			color: $black;
+		}
+		&:focus {
+			width: 220rem;
+			border-bottom: 1px solid $black;
+		}
+	}
+}

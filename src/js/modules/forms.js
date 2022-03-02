@@ -1,0 +1,96 @@
+import Inputmask from "inputmask";
+import validate from "jquery-validation";
+import { config } from "../config";
+
+var forms = {
+	mask: () => {
+		var selector = document.querySelectorAll("input[name='phone']");
+
+		var im = new Inputmask({
+			mask: "+7 (999) 999-99-99",
+			clearMaskOnLostFocus: true,
+			clearIncomplete: true,
+		});
+
+		im.mask(selector);
+	},
+
+	validate: () => {
+		$("form").each((i, el) => {
+			var $form = $(el);
+
+			$form.validate({
+				errorPlacement: function (error, element) {
+					//just nothing, empty
+				},
+				submitHandler: (form) => {
+					var data = $(form).serialize();
+					thank();
+					$.ajax({
+						type: "POST",
+						url: $(form).attr("action"),
+						data: data,
+						success: function (data) {
+							$(form)[0].reset();
+						},
+					});
+				},
+				rules: {
+					name: {
+						required: true,
+						minlength: 1,
+					},
+					phone: {
+						required: true,
+						minlength: 10,
+					},
+				},
+			});
+		});
+
+		function thank() {
+			$.magnificPopup.open({
+				tClose: 'Закрыть',
+				removalDelay: 500,
+				fixedContentPos: true,
+				fixedBgPos: true,
+				overflowY: 'hidden',			
+				closeMarkup: '<div class="modals__close close js-close-modal"><svg class="icon icon-close close" viewBox="0 0 612 612"><use xlink:href="/app/icons/sprite.svg#close"></use></svg></div>',
+				mainClass: 'css-modal-animate',				
+				items: {
+					src: "#thank",
+					type: 'inline'
+				},
+				callbacks: {
+					beforeOpen: () => {
+						$('body').addClass('is-modal-open')
+					},
+					beforeClose: () => {
+						$('body').removeClass('is-modal-open')
+					}
+				}
+			}, 0);
+		}
+	},
+
+	events: () => {
+		$(".input__field")
+			.on("focus", (e) => {
+				let $input = $(e.target);
+				$input.parent().addClass("is-focus");
+			})
+			.on("blur change", (e) => {
+				let $input = $(e.target);
+
+				if ($input.val() == "") $input.parent().removeClass("is-focus");
+			});
+	},
+
+	init: () => {
+		forms.mask();
+		forms.validate();
+		forms.events();
+	},
+};
+
+export { forms };

@@ -1,0 +1,72 @@
+q.content ul,
+.content ol {
+}
+
+.content b,
+.b {
+	font-weight: bold;
+}
+
+.content strong,
+.strong {
+	font-weight: bold;
+}
+
+.content p,
+.p {
+}
+
+.h1,
+.content h1,
+.h2,
+.content h2,
+.h3,
+.content h3,
+.h4,
+.content h4,
+.h5,
+.content h5,
+.h6,
+.content h6 {
+	font-family: 'Forum';
+	font-weight: normal;
+}
+
+.h1,
+.content h1 {
+	font-size: 144rem;
+	line-height: 90%;
+
+	@include small-tablet {
+		font-size: 86rem;
+	}
+
+	@include large-mobile {
+		font-size: 62rem;
+	}
+	
+}
+
+.h2,
+.content h2 {
+	
+}
+
+.h3,
+.content h3 {
+	
+}
+
+.h4,
+.content h4 {
+	
+}
+
+.h5,
+.content h5 {
+	
+}
+
+.h6,
+.content h6 {
+}

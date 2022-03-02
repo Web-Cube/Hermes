@@ -1,0 +1,29 @@
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	cursor: pointer;
+	color: #fff;
+	padding: 0 20rem;
+	transition: ease .2s;
+	background: $black;
+	height: 60rem;
+	font-size: 16rem;
+	line-height: 110%;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+
+	&:hover {
+		background: #444444;
+	}
+
+	&:active {
+		background: $orange;
+	}
+
+	@include large-mobile {
+		height: 50rem;
+		font-size: 14rem;
+	}
+}
