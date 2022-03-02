@@ -49,12 +49,21 @@ q.content ul,
 
 .h2,
 .content h2 {
-	
+	font-size: 96rem;
+	line-height: 120%;
+
+	@include large-mobile {
+		font-size: 50rem;
+	}
 }
 
 .h3,
 .content h3 {
-	
+	font-size: 48rem;
+	line-height: 120%;
+	@include large-mobile {
+		font-size: 28rem;
+	}
 }
 
 .h4,

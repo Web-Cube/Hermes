@@ -1,0 +1,44 @@
+.item-product {
+	display: block;
+	font-size: 16rem;
+	line-height: 120%;
+	font-weight: normal;
+
+	&__preview {
+		display: block;
+		position: relative;
+		height: 408rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 30rem;
+		background: #fff;
+		img {
+			max-height: 336rem;
+		}
+
+		@include large-tablet {
+			height: 340rem;
+		}
+	}
+
+	&__name {
+		margin-top: 24rem;
+		display: block;
+
+		@include large-mobile {
+			margin-top: 20rem;
+		}
+	}
+
+	&__prices {
+		margin-top: 10rem;
+		letter-spacing: -0.04em;
+		color: #444444;
+	}
+	&__price {
+		&:not(:last-child) {
+			margin-right: 17rem;
+		}
+	}
+}

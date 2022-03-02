@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <title>Home</title>
-    <link rel="stylesheet" href="/app/css/app.css?v=1646226127407">
+    <link rel="stylesheet" href="/app/css/app.css?v=1646234293273">
     <script>
         function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
     </script>
@@ -93,6 +93,16 @@
                             <div class="main__title h1">Birkin 2</div>
                             <div class="main__price">$ 3 499</div>
                         </div>
+                        <div class="main__top-item is-active js-main-item">
+                            <div class="main__category color-orange">Hermes</div>
+                            <div class="main__title h1">Birkin 35</div>
+                            <div class="main__price">$ 8 400</div>
+                        </div>
+                        <div class="main__top-item js-main-item">
+                            <div class="main__category color-orange">Hermes</div>
+                            <div class="main__title h1">Birkin 2</div>
+                            <div class="main__price">$ 3 499</div>
+                        </div>
                     </div>
                     <div class="main__bottom">
                         <div class="main__desc">Самый большой выбор сумок Hermes в&nbsp;России.
@@ -149,6 +159,38 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="main__slide swiper-slide">
+                                <div class="main__item">
+                                    <div class="main__item-info">
+                                        <div class="main__category color-orange">Hermes</div>
+                                        <div class="main__title h1">Birkin 35</div>
+                                        <div class="main__price">$ 8 400</div>
+                                    </div>
+                                    <div class="main__img">
+                                        <div class="main__img-bg"></div>
+                                        <picture>
+                                            <source type="image/webp" srcset="/app/img/main__img1.webp">
+                                                <img src="/app/img/main__img1.png" />
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main__slide swiper-slide">
+                                <div class="main__item">
+                                    <div class="main__item-info">
+                                        <div class="main__category color-orange">Hermes</div>
+                                        <div class="main__title h1">Birkin 2</div>
+                                        <div class="main__price">$ 3 499</div>
+                                    </div>
+                                    <div class="main__img">
+                                        <div class="main__img-bg"></div>
+                                        <picture>
+                                            <source type="image/webp" srcset="/app/img/main__img2.webp">
+                                                <img src="/app/img/main__img2.png" />
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -159,12 +201,57 @@
             </div>
         </div>
     </section>
+    <section class="similar-products">
+        <div class="similar-products__wrap wrap">
+            <h2 class="similar-products__title h3">Подчеркните свою элегантность</h2>
+            <div class="similar-products__desc">Каждая сумка Hermes — произведение искусства, которое невозможно подделать.
+                <br>Это надежный и&nbsp;качественный продукт, который выглядит привлекательно.</div>
+            <div class="similar-products__slider">
+                <div class="similar-products__swiper-nav swiper-navigation swiper-navigation_no-border">
+                    <div class="swiper-button-prev">
+                        <svg class="icon icon-prev" viewBox="0 0 42 20">
+                            <use xlink:href="/app/icons/sprite.svg#prev"></use>
+                        </svg>
+                    </div>
+                    <div class="swiper-button-next">
+                        <svg class="icon icon-next" viewBox="0 0 42 20">
+                            <use xlink:href="/app/icons/sprite.svg#next"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="similar-products__slider-container swiper-container js-slider" id="products" data-settings='{"slidesPerView":4,"loop":true,"speed":350,"spaceBetween":30,"breakpoints":{"0":{"slidesPerView":1,"spaceBetween":10},"580":{"slidesPerView":3,"spaceBetween":20},"820":{"slidesPerView":4,"spaceBetween":30}}}'>
+                    <div class="swiper-wrapper">
+                        <div class="similar-products__slide swiper-slide"><a class="similar-products__item item-product" href="#"><span class="item-product__preview"><picture>
+		                            <source type="image/webp" srcset="/app/img/products__img1.webp">
+		                            <img src="/app/img/products__img1.png"  />
+		                        </picture></span><span class="item-product__name">Hermès 1990-2000s Pre-owned Touareg Clutch Bag - Black</span><span class="item-product__prices flex"><span class="item-product__price">8 400 $</span></span></a>
+                        </div>
+                        <div class="similar-products__slide swiper-slide"><a class="similar-products__item item-product" href="#"><span class="item-product__preview"><picture>
+		                            <source type="image/webp" srcset="/app/img/products__img2.webp">
+		                            <img src="/app/img/products__img2.png"  />
+		                        </picture></span><span class="item-product__name">Hermès 1990-2000s Pre-owned Touareg Clutch Bag - Black</span><span class="item-product__prices flex"><span class="item-product__price">8 400 $</span></span></a>
+                        </div>
+                        <div class="similar-products__slide swiper-slide"><a class="similar-products__item item-product" href="#"><span class="item-product__preview"><picture>
+		                            <source type="image/webp" srcset="/app/img/products__img3.webp">
+		                            <img src="/app/img/products__img3.png"  />
+		                        </picture></span><span class="item-product__name">Hermès 1990-2000s Pre-owned Touareg Clutch Bag - Black</span><span class="item-product__prices flex"><span class="item-product__price">8 400 $</span></span></a>
+                        </div>
+                        <div class="similar-products__slide swiper-slide"><a class="similar-products__item item-product" href="#"><span class="item-product__preview"><picture>
+		                            <source type="image/webp" srcset="/app/img/products__img4.webp">
+		                            <img src="/app/img/products__img4.png"  />
+		                        </picture></span><span class="item-product__name">Hermès 1990-2000s Pre-owned Touareg Clutch Bag - Black</span><span class="item-product__prices flex"><span class="item-product__price">8 400 $</span></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer class="footer">
         <div class="footer__wrap wrap"></div>
     </footer>
     <div class="modals modals_center mfp-hide" id="recall"></div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="/app/js/app.js?v=1646226127420"></script>
+    <script src="/app/js/app.js?v=1646234293297"></script>
 </body>
 
 </html>

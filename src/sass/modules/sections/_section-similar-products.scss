@@ -1,0 +1,54 @@
+.similar-products {
+	padding: 80rem 0;
+
+	@include large-mobile {
+		padding: 30rem 0;
+	}
+
+	&__title {
+		text-align: center;
+		text-transform: uppercase;
+		&.h3 {
+			letter-spacing: 0.08em;
+		}
+	}
+	&__desc {
+		text-align: center;
+		margin-top: 20rem;
+	}
+
+	&__slider {
+		margin-top: 80rem;
+		position: relative;
+		&-container {
+			overflow: hidden;
+		}
+
+		@include large-mobile {
+			margin-top: 35rem;
+		}
+	}
+
+	&__swiper-nav {
+		position: absolute;
+		top: 170rem;
+		width: calc( 100% + 60rem );
+		justify-content: space-between;
+		left: -30rem;
+
+		@include large-tablet {
+			top: 140rem;
+		}
+
+		@include small-tablet {
+			left: -20rem;
+			width: calc( 100% + 40rem );
+		}
+
+		@include large-mobile {
+			top: 150rem;
+			left: -18rem;
+			width: calc( 100% + 36rem );
+		}
+	}
+}

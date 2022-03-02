@@ -16,6 +16,36 @@
 	&-navigation {
 		display: flex;
 		position: absolute;
+		&_no-border {
+			.swiper-button {
+				&-prev, &-next {
+					border: 0;
+					width: 50rem;
+					height: 50rem;
+					svg {
+						width: 50rem;
+						height: 24rem;
+					}
+					&:hover {
+						fill: $red;
+						background: none;
+					}
+				}
+			}
+			@include large-mobile {
+				.swiper-button {
+					&-prev, &-next {
+						border: 0;
+						width: 42rem;
+						height: 42rem;
+						svg {
+							width: 42rem;
+							height: 20rem;
+						}
+					}
+				}
+			}
+		}
 	}
 	&-button {
 		&-prev, &-next {
