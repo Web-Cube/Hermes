@@ -19,6 +19,10 @@
 
 		@include large-tablet {
 			height: 340rem;
+			padding: 20rem;
+			img {
+				max-height: 300rem;
+			}
 		}
 	}
 
