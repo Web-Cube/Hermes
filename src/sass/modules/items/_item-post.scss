@@ -1,0 +1,37 @@
+.item-post {
+	display: block;
+	&__preview {
+		position: relative;
+		overflow: hidden;
+		padding-top: 350/447*100%;
+		display: block;
+		&_big {
+			padding-top: 540/446*100%;
+		}
+
+		@include large-mobile {
+			&_big {
+				padding-top: 480/446*100%;
+			}
+		}
+	}
+	&__title {
+		display: block;
+		margin-top: 24rem;
+
+		@include large-mobile {
+			margin-top: 20rem;
+		}
+	}
+	&__date {
+		display: block;
+		font-size: 16rem;
+		font-weight: normal;
+		color: #656565;
+		margin-top: 15rem;
+		@include large-mobile {
+			font-size: 14rem;
+			margin-top: 10rem;
+		}
+	}
+}

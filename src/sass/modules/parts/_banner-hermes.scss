@@ -1,0 +1,66 @@
+.banner-hermes {
+	max-width: 1680px;
+	margin: 120rem auto 0 auto;
+	position: relative;
+
+	@include mackbook {
+		max-width: none;
+	}
+
+	@include large-mobile {
+		margin-top: 0;
+	}
+
+	&__preview {
+		padding-top: 968/1680*100%;
+		position: relative;
+		overflow: hidden;
+
+		@include large-mobile {
+			padding-top: 75%;
+		}
+	}
+
+	&__logo {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 843rem;
+		transform: translateX(-50%) translateY(-50%);
+		img {
+			width: 100%;
+		}
+
+		@include small-tablet {
+			width: 600rem;
+		}
+
+		@include large-mobile {
+			width: 240rem;
+		}
+	}
+
+	&__line {
+		position: absolute;
+		width: 1px;
+		height: 160rem;
+		left: 50%;
+		z-index: 3;
+		&_white {
+			background: #fff;
+			bottom: 0;
+		}
+		&_black {
+			background: $black;
+			top: 100%;
+		}
+
+		@include large-tablet {
+			height: 120rem;
+		}
+
+		@include large-mobile {
+			display: none;
+		}
+	}
+}

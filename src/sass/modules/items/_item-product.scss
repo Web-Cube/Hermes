@@ -4,6 +4,22 @@
 	line-height: 120%;
 	font-weight: normal;
 
+	&_big {
+		.item-product {
+			&__preview {
+				height: 460rem;
+			}
+		}
+
+		@include large-tablet {
+			.item-product {
+				&__preview {
+					height: 340rem;
+				}
+			}
+		}
+	}
+
 	&__preview {
 		display: block;
 		position: relative;
@@ -12,9 +28,10 @@
 		align-items: center;
 		justify-content: center;
 		padding: 30rem;
-		background: #fff;
+		background: #F8F5EF;
 		img {
 			max-height: 336rem;
+			mix-blend-mode: darken;
 		}
 
 		@include large-tablet {

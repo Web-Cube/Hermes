@@ -1,0 +1,39 @@
++b.SECTION.sell-bag
+	+e.wrap.wrap
+		+e.head
+			+e.H2.title.h2 Продать сумку
+			+e.desc
+				| Платим до 85% от начальной стоимости. 
+				br
+				| Узнайте цену за 15 минут, не выходя из дома
+			+btn(href="#online" class="js-modal") Онлайн-оценка
+		+e.inner
+			+e.A.more(href="#") Все новости
+			+e.slider.swiper-container.js-slider#news
+				.swiper-wrapper
+					+e.slide.swiper-slide
+						+e.A.item.item-post__(href="#")
+							+e.preview._big
+								img.object-fit(src="/img/item-post__img1.jpg")
+							+e.title.h5 Какие бывают коллекции сумок Hermes?
+							+e.date 16 июня
+					+e.slide.swiper-slide
+						+e.A.item.item-post__(href="#")
+							+e.preview._big
+								img.object-fit(src="/img/item-post__img2.jpg")
+							+e.title.h5 В чем уникальность сумок Hermes?
+							+e.date 30 июня
+					+e.slide.swiper-slide
+						+e.A.item.item-post__(href="#")
+							+e.preview._big
+								img.object-fit(src="/img/item-post__img3.jpg")
+							+e.title.h5 Сумка Hermes — мечта любой женщины
+							+e.date 7 августа
+					+e.slide.swiper-slide
+						+e.A.item.item-post__(href="#")
+							+e.preview._big
+								img.object-fit(src="/img/item-post__img4.jpg")
+							+e.title.h5 Модель Hermеs Birkin стала самой популярной сумкой в Instagram
+							+e.date 13 сентября
+		+e.btn-wrap
+			+btn Все новости

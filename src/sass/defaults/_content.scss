@@ -81,7 +81,12 @@ q.content ul,
 
 .h5,
 .content h5 {
-	
+	font-size: 24rem;
+	line-height: 120%;
+
+	@include large-mobile {
+		font-size: 18rem;
+	}
 }
 
 .h6,

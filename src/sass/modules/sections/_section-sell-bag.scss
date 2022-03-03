@@ -1,0 +1,82 @@
+.sell-bag {
+	padding: 200rem 0 100rem 0;
+	overflow: hidden;
+
+	@include large-mobile {
+		padding: 70rem 0;
+	}
+
+	&__head {
+		text-align: center;
+	}
+	&__title {
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+	}
+	&__desc {
+		margin-top: 20rem;
+
+		@include large-mobile {
+			margin-top: 10rem;
+		}
+	}
+	&__btn {
+		width: 253rem;
+		margin-top: 35rem;
+
+		@include large-mobile {
+			margin-top: 30rem;
+		}
+	}
+	&__item {
+		width: 446rem;
+		@include large-mobile {
+			width: 320rem;
+		}
+	}
+	&__slide {
+		margin-right: 30rem;
+		@include large-mobile {
+			margin-right: 10rem;
+		}
+	}
+	&__slider {
+		margin-right: -500rem;
+		overflow: hidden;
+		@include large-mobile {
+			margin-right: -20px;
+		}
+	}
+	&__inner {
+		position: relative;
+		margin-top: 120rem;
+
+		@include large-mobile {
+			margin-top: 60rem;
+		}
+	}
+	&__more {
+		font-size: 16rem;
+		line-height: 120%;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		font-weight: normal;
+		transform: rotate(-90deg);
+		display: block;
+		position: absolute;
+		left: -165rem;
+		top: 260rem;
+
+		@include mackbook {
+			display: none;
+		}
+	}
+	&__btn-wrap {
+		display: none;
+
+		@include mackbook {
+			display: flex;
+			justify-content: center;
+		}
+	}
+}

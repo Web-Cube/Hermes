@@ -40,6 +40,10 @@
 		justify-content: space-between;
 		left: -30rem;
 
+		&_big {
+			top: 200rem;
+		}
+
 		@include large-tablet {
 			top: 140rem;
 		}
