@@ -1,3 +1,25 @@
 .footer {
-	
+	padding: 80rem 0 60rem 0;
+	&__wrap {
+		max-width: 1680px;
+		margin: 0 auto;
+
+		@include mackbook {
+			max-width: inherit;
+		}
+	}
+
+	&__inner {
+		border: 1px solid $black;
+		padding: 80rem 140rem;
+		@include mackbook {
+			border-left: 0;
+			border-right: 0;
+		}
+	}
+
+	&__copyright {
+		margin-top: 10rem;
+		font-size: 14rem;
+	}
 }

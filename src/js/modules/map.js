@@ -5,35 +5,27 @@ var map = {
 			ymaps.ready(function () {
 				$('.js-map').each(function() {
 
-					let size = [88, 88];
-					let offset = [-44, -77];
+					let size = [197, 134];
+					let offset = [-98, -110];
 
 					let winWidth = $(window).width();
 
 					if ( winWidth < 581 ) {
-						size = [48, 48];
-						offset = [-22, -42];
+						size = [120, 80];
+						offset = [-60, -65];
 					}
 
 					var myMap = new ymaps.Map("map", {
-			            center: [59.978366, 30.381605],
-			            zoom: 10
+			            center: [55.73731406898891,37.60089949999996],
+			            zoom: 17
 			        });
 
 				    myMap.geoObjects
-				        .add(new ymaps.Placemark([59.894170, 30.427089], {
-				            balloonContent: 'Санкт-Петербург, улица Бабушкина, 21'
+				        .add(new ymaps.Placemark([55.73731406898891,37.60089949999996], {
+				            balloonContent: 'г. Москва, Коробейников пер., д.1'
 				        }, {
 				            iconLayout: 'default#image',
-				            iconImageHref: '/app/img/location.svg',
-				            iconImageSize: size,
-				            iconImageOffset: offset,
-				        }))
-				        .add(new ymaps.Placemark([60.030182, 30.334266], {
-				            balloonContent: 'Санкт-Петербург, Северный проспект. д.5к3'
-				        }, {
-				            iconLayout: 'default#image',
-				            iconImageHref: '/app/img/location.svg',
+				            iconImageHref: '/app/img/marker.svg',
 				            iconImageSize: size,
 				            iconImageOffset: offset,
 				        }));

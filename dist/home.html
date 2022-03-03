@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <title>Home</title>
-    <link rel="stylesheet" href="/app/css/app.css?v=1646316803483">
+    <link rel="stylesheet" href="/app/css/app.css?v=1646327747606">
     <script>
         function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
     </script>
@@ -123,8 +123,6 @@
                             </svg>
                         </div>
                     </div>
-                    <div class="main__counter swiper-counter"><span class="swiper-counter-current">01</span><span> /</span><span class="swiper-counter-length"></span>
-                    </div>
                     <div class="main__slider swiper-container js-slider" id="main">
                         <div class="swiper-wrapper">
                             <div class="main__slide swiper-slide">
@@ -192,6 +190,8 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="main__counter swiper-counter"><span class="swiper-counter-current">01</span><span> /</span><span class="swiper-counter-length"></span>
                     </div>
                 </div>
             </div>
@@ -401,12 +401,18 @@
             </div>
         </div>
     </section>
+    <div class="map js-map" id="map"></div>
     <footer class="footer">
-        <div class="footer__wrap wrap"></div>
+        <div class="footer__wrap">
+            <div class="footer__inner">
+                <div class="footer__row flex"></div>
+            </div>
+            <div class="footer__copyright">©2020 Все права защищены</div>
+        </div>
     </footer>
     <div class="modals modals_center mfp-hide" id="recall"></div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="/app/js/app.js?v=1646316803547"></script>
+    <script src="/app/js/app.js?v=1646327747662"></script>
 </body>
 
 </html>

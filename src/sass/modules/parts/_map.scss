@@ -1,0 +1,26 @@
+.map {
+	max-width: 1680px;
+	margin: 0 auto;
+	height: 500rem;
+	@include mackbook {
+		max-width: inherit;
+	}
+	.map-circle-placemark__content {
+		display: none !important;
+	}
+	.ymaps-2-1-79-searchbox, .ymaps-2-1-79-copyright__link, .ymaps-2-1-79-scaleline, .ymaps-2-1-79-gototech {
+		display: none;
+	}
+	@include large-mobile {
+		height: 360rem;
+		.ymaps-2-1-79-map {
+			-ms-touch-action: auto !important;
+			touch-action: auto !important;
+			z-index: inherit;
+		}
+		.ymaps-2-1-79-controls__control {
+			position: relative !important;
+			z-index: 500;
+		}
+	}
+}
