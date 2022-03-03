@@ -12,8 +12,16 @@ q.content ul,
 	font-weight: bold;
 }
 
-.content p,
-.p {
+.content p, ul, ol {
+	&:not(:first-child) {
+		margin-top: 25rem;
+	}
+
+	@include large-mobile {
+		&:not(:first-child) {
+			margin-top: 15rem;
+		}
+	}
 }
 
 .h1,

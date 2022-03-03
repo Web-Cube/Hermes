@@ -1,0 +1,116 @@
+.banner-bags {
+	max-width: 1680px;
+	margin: 80rem auto 0 auto;
+	background: #F8F5EF;
+	position: relative;
+	min-height: 579rem;
+	overflow: hidden;
+	padding: 95rem 0 120rem 140rem;
+	display: flex;
+
+	@include mackbook {
+		max-width: none;
+		padding-left: 50rem;
+	}
+
+	@include small-tablet {
+		padding: 95rem 20px 100rem 20px;
+		min-height: inherit;
+	}
+
+	@include large-mobile {
+		margin-top: 20rem;
+		padding: 60rem 20px;
+		display: block;
+	}
+
+	&__img {
+		background: #F8F5EF;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: 696rem;
+		pointer-events: none;
+		img {
+			mix-blend-mode: darken;
+		}
+
+		@include large-tablet {
+			width: 600rem;
+			right: -40rem;
+		}
+
+		@include small-tablet {
+			display: none;
+		}
+	}
+
+	&__column {
+		position: relative;
+		&_left {
+			width: 405rem;
+			padding-top: 20rem;
+			order: 1;
+		}
+		&_right {
+			width: 430rem;
+			margin-left: 190rem;
+			order: 2;
+		}
+		@include mackbook {
+			&_right {
+				margin-left: 150rem;
+			}
+		}
+
+		@include large-tablet {
+			&_right {
+				margin-left: 80rem;
+			}
+		}
+
+		@include small-tablet {
+			width: 50%;
+			&_right {
+				margin-left: 0;
+			}
+			&_left {
+				padding-right: 50rem;
+			}
+		}
+
+		@include large-mobile {
+			width: 100%;
+			&_left {
+				padding-right: 0;
+				margin-top: 15rem;
+				padding-top: 0;
+			}
+		}
+	}
+
+	&__content {
+		&:not(:first-child) {
+			margin-top: 22rem;
+		}
+		@include large-mobile {
+			&:not(:first-child) {
+				margin-top: 20rem;
+			}
+		}
+	}
+
+	&__btn {
+		width: 204rem;
+		margin-top: 54rem;
+
+		@include large-mobile {
+			margin-top: 30rem;
+		}
+	}
+
+	&__title {
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+	}
+}
