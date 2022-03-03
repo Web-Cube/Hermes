@@ -30,3 +30,15 @@ block content
 		+e.logo
 			img(src="/app/img/logo_white.svg")
 	include ../sections/section-sell-bag
+	+b.auth
+		+e.column._left
+			+e.img
+				img.object-fit(src="/img/auth__img.jpg")
+		+e.column._right
+			+e.content
+				+e.H2.title.h3
+					| Аутентификация сумок Hermes
+				+e.text
+					| Bababebi - это независимая служба аутентификации, которая дает заключения о подлинности сумок Hermès, не связаная с Hermès и не спонсируется ею, но  имеющаяя огромный авторитет в мире оценки.
+				+btn(href="#online" class="js-modal") Продать сумку
+	include ../sections/section-contact

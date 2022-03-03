@@ -1,0 +1,88 @@
+.auth {
+	max-width: 1680px;
+	padding: 30rem;
+	background: #F8F5EF;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+
+	@include mackbook {
+		padding: 30rem 50rem;
+		max-width: inherit;
+	}
+
+	@include small-tablet {
+		flex-wrap: wrap;
+		padding: 60rem 20px;
+	}
+
+	&__img {
+		position: relative;
+		overflow: hidden;
+		padding-top: 508/795*100%;
+
+		@include large-tablet {
+			padding-top: 550/795*100%;
+		}
+	}
+
+	&__column {
+		&_left {
+			width: 795rem;
+		}
+		&_right {
+			width: 676rem;
+			padding-top: 30rem;
+		}
+
+		@include mackbook {
+			&_left {
+				width: 700rem;
+			}
+			&_right {
+				width: 580rem;
+			}
+		}
+		@include large-tablet {
+			&_left {
+				width: 53%;
+			}
+			&_right {
+				width: 42%;
+				padding-top: 0;
+			}
+		}
+		@include small-tablet {
+			width: 100%;
+			&_right {
+				margin-top: 35rem;
+			}
+		}
+	}
+
+	&__title {
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+	}
+	&__content {
+		max-width: 566rem;
+		@include small-tablet {
+			max-width: inherit;
+		}
+	}
+	&__text {
+		margin-top: 20rem;
+		@include large-mobile {
+			margin-top: 15rem;
+		}
+	}
+	&__btn {
+		margin-top: 40rem;
+		width: 242rem;
+
+		@include small-tablet {
+			margin-top: 35rem;
+		}
+	}
+}
