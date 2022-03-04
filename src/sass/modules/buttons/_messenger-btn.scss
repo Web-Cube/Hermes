@@ -1,0 +1,33 @@
+.messenger-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 65rem;
+	height: 65rem;
+	border: 1px solid rgba(27, 27, 27, 0.36);
+	border-radius: 100%;
+	transition: ease .2s;
+	&__icon {
+		width: 24rem;
+		height: 24rem;
+	}
+	&:hover {
+		background: $black;
+		border-color: $black;
+		path {
+			fill: #fff;
+			&:nth-child(2) {
+				fill: $black;
+			}
+		}
+	}
+
+	@include large-mobile {
+		width: 50rem;
+		height: 50rem;
+		&__icon {
+			width: 18rem;
+			height: 18rem;
+		}
+	}
+}

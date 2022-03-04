@@ -24,6 +24,15 @@ q.content ul,
 	}
 }
 
+.small {
+	font-size: 16rem;
+	line-height: 140%;
+
+	@include large-mobile {
+		font-size: 14rem;
+	}
+}
+
 .h1,
 .content h1,
 .h2,

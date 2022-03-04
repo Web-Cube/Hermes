@@ -1,5 +1,10 @@
 .footer {
 	padding: 80rem 0 60rem 0;
+
+	@include large-mobile {
+		padding: 60rem 0 20rem 0;
+	}
+
 	&__wrap {
 		max-width: 1680px;
 		margin: 0 auto;
@@ -16,10 +21,161 @@
 			border-left: 0;
 			border-right: 0;
 		}
+
+		@include mackbook(-200) {
+			padding-left: 50rem;
+			padding-right: 50rem;
+		}
+
+		@include small-tablet {
+			padding: 60rem 20px;
+		}
+
+		@include large-mobile {
+			padding: 50rem 20px 40rem 20px;
+		}
 	}
 
 	&__copyright {
 		margin-top: 10rem;
 		font-size: 14rem;
+		@include mackbook {
+			padding-left: 140rem;
+		}
+		@include mackbook(-200) {
+			padding-left: 50rem;
+		}
+		@include small-tablet {
+			padding-left: 20px;
+		}
+	}
+
+	&__column {
+		display: flex;
+    	flex-direction: column;	
+		&_left {
+			width: 25%;
+		}
+		&_center {
+			width: 42%;
+			padding-right: 40rem;
+		}
+		&_right {
+			width: 33%;
+		}
+
+		@include small-tablet {
+			&_left {
+				width: 100%;
+				margin-bottom: 40rem;
+			}
+			&_center {
+				width: 55%;
+				padding-right: 20rem;
+			}
+			&_right {
+				width: 45%;
+			}
+		}
+
+		@include large-mobile {
+			&_center {
+				width: 100%;
+				padding-right: 0;
+			}
+			&_right {
+				margin-top: 40rem;
+				width: 100%;
+			}
+		}
+	}
+
+	&__top {
+		flex: 1 0 auto;
+	}
+	&__bottom {
+		margin-top: 70rem;
+
+		@include small-tablet {
+			margin-top: 40rem;
+		}
+
+		@include large-mobile {
+			margin-top: 20rem;
+		}
+	}
+
+	&__logo {
+		width: 184rem;
+		display: block;
+		img {
+			width: 100%;
+		}
+	}
+	a:not(.phone) {
+		&:hover {
+			color: $orange;
+			font-weight: normal;
+		}
+	}
+
+	&__nav {
+		list-style: none;
+		&-column {
+			width: 50%;
+		}
+		&-item {
+			margin-bottom: 10rem;
+		}
+	}
+
+	&__contact {
+		&-item {
+			&:not(:first-child) {
+				margin-top: 20rem;
+			}
+		}
+		&-title {
+			font-size: 14rem;
+			letter-spacing: 2rem;
+			margin-bottom: 10rem;
+		}
+		&-column {
+			&_left {
+				max-width: 240rem;
+			}
+		}
+		&-text {
+			font-weight: normal;
+			&:not(:last-child) {
+				margin-bottom: 5rem;
+			}
+		}
+	}
+
+	&__dev {
+		display: block;
+		transition: ease .2s;
+		color: #AFAFAE;
+		font-size: 14rem;
+		&-logo {
+			display: block;
+			width: 62rem;
+			path {
+				transition: ease .2s;
+			}
+		}
+		&-text {
+			display: block;
+			font-weight: normal;
+		}
+		&:hover {
+			color: $orange;
+			.footer__dev-logo {
+				path {
+					fill: $orange
+				}
+			}
+		}
 	}
 }

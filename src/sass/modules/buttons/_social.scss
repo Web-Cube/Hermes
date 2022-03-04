@@ -1,0 +1,28 @@
+.social {
+	display: flex;
+	&__btn {
+		width: 24rem;
+		height: 24rem;
+		transition: ease .2s;
+		fill: #AFAFAE;
+		path {
+			fill: #AFAFAE;
+			transition: ease .2s;
+			&:nth-child(2) {
+				fill: #ECE9E3;
+			}
+		}
+		&:not(:last-child) {
+			margin-right: 20rem;
+		}
+		&:hover {
+			fill: $orange;
+			path {
+				fill: $orange;
+				&:nth-child(2) {
+					fill: #ECE9E3;
+				}
+			}
+		}
+	}
+}
