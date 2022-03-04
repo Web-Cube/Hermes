@@ -121,6 +121,7 @@
 
 	&__nav {
 		list-style: none;
+		margin-bottom: -10rem;
 		&-column {
 			width: 50%;
 		}
@@ -158,9 +159,11 @@
 		transition: ease .2s;
 		color: #AFAFAE;
 		font-size: 14rem;
+		line-height: 1;
 		&-logo {
 			display: block;
 			width: 62rem;
+			margin-bottom: 7rem;
 			path {
 				transition: ease .2s;
 			}

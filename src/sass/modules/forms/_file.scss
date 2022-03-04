@@ -1,0 +1,41 @@
+.file {
+	position: relative;
+	font-weight: normal;
+	font-size: 16rem;
+	line-height: 120%;
+	color: $orange;
+
+	@include large-mobile {
+		font-size: 14rem;
+	}
+	&__input {
+		cursor: pointer;
+		opacity: 0;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}
+	&__text {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+	&__btn {
+		display: flex;
+		align-items: center;
+	}
+	&__icon {
+		width: 24rem;
+		height: 24rem;
+		flex-shrink: 0;
+		margin-right: 9rem;
+		fill: $orange;
+		@include large-mobile {
+			width: 20rem;
+			height: 20rem;
+			margin-right: 7rem;
+		}
+	}
+}

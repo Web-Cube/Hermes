@@ -1,21 +1,39 @@
 .field {
 	position: relative;
 	display: block;
+	&.is-active {
+		.field__input {
+			&_hidden {
+				&:nth-child(2) {
+					display: block;
+				}
+				&:nth-child(1) {
+					display: none;
+				}
+			}
+		}
+	}
 	&__input {
 		display: block;
 		width: 100%;
 		height: 60rem;
-		border: 1px solid #E6E9EF;
-		border-radius: 12rem;
+		border: 1px solid rgba(27, 27, 27, 0.24);;
 		font-size: 18rem;
 		line-height: 140%;
 		padding: 0 24rem;
 		transition: ease .2s;
+		background: #F8F5EF;
+
 		&::placeholder {
-			color: $gray;
+			color: #7E7E7E;
 		}
-		&:focus {
-			border-color: $gray;
+		&:focus, &:hover {
+			border-color: rgba(27, 27, 27, 0.36);
+		}
+		&:disabled {
+			color: rgba(126, 126, 126, 0.5);
+			background: #F8F5EF;
+			border-color: rgba(27, 27, 27, 0.08);
 		}
 		&.error {
 			color: $red;
@@ -25,10 +43,28 @@
 			}
 		}
 
+		&_hidden {
+			&:nth-child(2) {
+				display: none;
+			}
+		}
+
+		&_textarea {
+			height: 120rem;
+			padding-top: 18rem;
+			overflow: hidden;
+			resize: none;
+		}
+
 		@include large-mobile {
-			height: 48rem;
+			height: 50rem;
 			padding: 0 16rem;
-			font-size: 16rem;
+			font-size: 15rem;
+			&_textarea {
+				padding-top: 13rem;
+				height: 85rem;
+			}
+
 		}
 	}
 
@@ -41,6 +77,34 @@
 					color: $red;
 				}
 			}
+		}
+	}
+	&__bottom {
+		margin-top: 12rem;
+		@include large-mobile {
+			margin-top: 5rem;
+		}
+	}
+	&__link {
+		font-size: 16rem;
+		font-weight: normal;
+		transition: ease .2s;
+		cursor: pointer;
+		&:before { 
+			content: attr(data-show);
+			text-decoration: underline;
+		}
+		&:hover {
+			color: $orange;
+		}
+		&.is-active {
+			&:before {
+				content: attr(data-hide);
+			}
+		}
+
+		@include large-mobile {
+			font-size: 14rem;
 		}
 	}
 }

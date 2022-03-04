@@ -1,10 +1,10 @@
 .mfp-container{
-	padding: 16px;
+	padding: 0;
 	overflow-x: hidden;
 	overflow-y: auto;
 }
 .mfp-bg{
-	background: rgba(42, 50, 70, 0.1);
+	background: rgba(27, 27, 27, 0.2);
 	transition: ease .5s;
 	opacity: 0;
 	&.mfp-ready {
@@ -19,34 +19,135 @@
 }
 
 .mfp-image-holder {
-	background: rgba(42, 50, 70, 0.1);
+	background: rgba(27, 27, 27, 0.2);
 }
 
 .mfp-content{
 	@extend .clear;
+	position: static;
 }
 
 .modals{
 	margin: auto;
 	position: relative;
 	width: 100%;
-	max-width: 593rem;
-	&__form {
-		padding: 48rem;
+	background: #F8F5EF;
+
+	&_left {
+		position: absolute;
+		left: 0;
+		top: 0;
+		max-width: 707rem;
+		height: 100vh;
+		padding: 104rem 120rem;
+		overflow-x: hidden;
+		overflow-y: auto;
 
 		@include large-mobile {
-			padding: 32rem 16rem;
+			max-width: inherit;
+			padding: 40rem 20px;
 		}
 	}
 
 	&__close {
-		width: 24rem;
-		height: 24rem;
-		position: absolute;
-		right: 16rem;
-		top: 16rem;
+		display: flex;
+		align-items: center;
+		font-size: 16rem;
+		line-height: 120%;
 		cursor: pointer;
-		fill: $red;
+		font-weight: normal;
+		transition: ease .2s;
+		position: absolute;
+		right: 24rem;
+		top: 24rem;
+		&-icon {
+			width: 24rem;
+			height: 24rem;
+			margin-left: 9rem;
+			fil: $black;
+			transition: ease .2s;
+		}
+		&:hover {
+			color: $orange;
+			.modals__close-icon {
+				fill: $orange;
+			}
+		}
+
+		@include large-mobile {
+			right: 20rem;
+			top: 20rem;
+			&-text {
+				display: none;
+			}
+			&-icon {
+				width: 20rem;
+				height: 20rem;
+			}
+		}
+	}
+
+	&__desc {
+		margin-top: 20rem;
+
+		@include large-mobile {
+			margin-top: 10rem;
+		}
+	}
+
+	&__form {
+		margin-top: 40rem;
+		@include large-mobile {
+			margin-top: 30rem;
+		}
+	}
+
+	&__field {
+		&:not(:first-child) {
+			margin-top: 24rem;
+		}
+		@include large-mobile {
+			&:not(:first-child) {
+				margin-top: 15rem;
+			}
+		}
+	}
+
+	&__btn {
+		padding: 0 44rem;
+		&:not(:first-child) {
+			margin-top: 40rem;
+		}
+
+		@include large-mobile {
+			width: 100%;
+			padding: 0 20rem;
+			&:not(:first-child) {
+				margin-top: 25rem;
+			}
+			&:first-child {
+				margin-top: 10rem;
+			}
+		}
+	}
+
+	&__file {
+		margin-top: 32rem;
+
+		@include large-mobile {
+			margin-top: 20rem;
+		}
+	}
+
+	&__form {
+		max-width: 420rem;
+	}
+
+	&__messengers {
+		margin-top: 24rem;
+		@include large-mobile {
+			margin-top: 20rem;
+		}
 	}
 }
 
@@ -67,9 +168,9 @@
 		transition: all .5s ease;
 		opacity: 0;
 
-		&_right{
+		&_left{
 
-			transform: translate(25rem, 0);
+			transform: translateX(-100%);
 		}
 
 		&_center{
@@ -96,8 +197,8 @@
 		.modals, .mfp-figure{
 			opacity: 0;
 
-			&_right{
-				transform: translate(25rem, 0);
+			&_left{
+				transform: translateX(-100%);
 			}
 
 			&_center{
@@ -106,7 +207,7 @@
 		}
 	}
 
-	@include small-tablet {
+	@include large-mobile {
 		.modals, .mfp-figure{
 			transform: translate(0, 0)!important;
 		}

@@ -1,0 +1,47 @@
+.checkbox {
+	display: flex;
+	font-size: 16rem;
+	line-height: 120%;
+	font-weight: normal;
+	display: flex;
+	cursor: pointer;
+
+	@include large-mobile {
+		font-size: 14rem;
+	}
+
+	&__input {
+		display: none;
+
+		&:checked + .checkbox__icon {
+			&:before {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__icon {
+		flex-shrink: 0;
+		width: 16rem;
+		height: 16rem;
+		border: 1px solid $black;
+		margin-right: 8rem;
+		position: relative;
+		top: 1px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&:before {
+			content: '';
+			display: block;
+			width: 8rem;
+			height: 8rem;
+			background: $black;
+			opacity: 0;
+			transition: ease .2s;
+		}
+		@include large-mobile {
+			top: 0;
+		}
+	}
+}

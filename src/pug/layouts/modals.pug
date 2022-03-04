@@ -1,1 +1,61 @@
-+b.modals._center.mfp-hide#recall
++b.modals._left.mfp-hide#online
+	+e.close.js-close-modal
+		+e.close-text ЗАКРЫТЬ
+		+e.close-icon
+			+icon('close')
+	+e.title.h4 Онлайн-оценка
+	+e.desc Заполните форму для онлайн-оценки
+	+e.FORM.form(action="/app/mail/")
+		+field(placeholder="Ваше имя")
+		+e.field.field__.js-field
+			+e.INPUT.input._hidden(placeholder="Ваше телефон" name="phone" type="tel" autocomplete="off")
+			+e.INPUT.input._hidden(placeholder="Ваше email" name="email" type="email")
+			+e.bottom.flex._right
+				+e.A.link.js-change-email(data-show="Хочу указать Email" data-hide="Хочу указать телефон")
+		+e.field.field__.js-field
+			+e.TEXTAREA.input._textarea(placeholder="Комментарий")
+		+e.field
+			+e.LABEL.checkbox.checkbox__
+				+e.INPUT.input(type="checkbox" checked)
+				+e.icon
+				+e.text Я согласен с Правилами обработки и хранения персональных данных.
+		+e.file.file__.js-file
+			+e.INPUT.input.js-file-input(type="file")
+			+e.btn
+				+e.icon
+					+icon('upload')
+				+e.text.js-file-name Загрузить фото
+		+e.messengers.messengers__
+			+e.LABEL.btn
+				+e.INPUT.input(type="radio" name="messenger" value="Whatsapp")
+				+e.text Whatsapp
+			+e.LABEL.btn
+				+e.INPUT.input(type="radio" name="messenger" value="Telegram")
+				+e.text Telegram
+			+e.LABEL.btn
+				+e.INPUT.input(type="radio" name="messenger" value="Viber")
+				+e.text Viber
+		+e.field
+			+btn(false) Оценить сумку
++b.modals._left.mfp-hide#buy
+	+e.close.js-close-modal
+		+e.close-text ЗАКРЫТЬ
+		+e.close-icon
+			+icon('close')
+	+e.title.h4 Купить сумку
+	+e.desc Оставьте заявку и мы свяжемся с вами
+	+e.FORM.form(action="/app/mail/")
+		+field(placeholder="Ваше имя")
+		+e.field.field__.js-field
+			+e.INPUT.input._hidden(placeholder="Ваше телефон" name="phone" type="tel" autocomplete="off")
+			+e.INPUT.input._hidden(placeholder="Ваше email" name="email" type="email")
+			+e.bottom.flex._right
+				+e.A.link.js-change-email(data-show="Хочу указать Email" data-hide="Хочу указать телефон")
+		+e.field.field__.js-field
+			+e.TEXTAREA.input._textarea(placeholder="Комментарий")
+		+e.field
+			+e.LABEL.checkbox.checkbox__
+				+e.INPUT.input(type="checkbox" checked)
+				+e.icon
+				+e.text Я согласен с Правилами обработки и хранения персональных данных.
+		+btn(false) Купить сумку

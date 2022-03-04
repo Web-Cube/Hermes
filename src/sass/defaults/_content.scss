@@ -85,7 +85,11 @@ q.content ul,
 
 .h4,
 .content h4 {
-	
+	font-size: 40rem;
+	line-height: 90%;
+	@include large-mobile {
+		font-size: 28rem;
+	}
 }
 
 .h5,

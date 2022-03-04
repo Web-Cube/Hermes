@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <title>Home</title>
-    <link rel="stylesheet" href="/app/css/app.css?v=1646384065600">
+    <link rel="stylesheet" href="/app/css/app.css?v=1646404431307">
     <script>
         function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
     </script>
@@ -466,7 +466,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="footer__bottom flex flex_justify flex_vertical">
+                        <div class="footer__bottom flex flex_justify flex_bottom">
                             <div class="footer__social social">
                                 <a class="social__btn" href="#">
                                     <svg viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
@@ -496,9 +496,100 @@
             <div class="footer__copyright">©2020 Все права защищены</div>
         </div>
     </footer>
-    <div class="modals modals_center mfp-hide" id="recall"></div>
+    <div class="modals modals_left mfp-hide" id="online">
+        <div class="modals__close js-close-modal">
+            <div class="modals__close-text">ЗАКРЫТЬ</div>
+            <div class="modals__close-icon">
+                <svg class="icon icon-close" viewBox="0 0 24 24">
+                    <use xlink:href="/app/icons/sprite.svg#close"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="modals__title h4">Онлайн-оценка</div>
+        <div class="modals__desc">Заполните форму для&nbsp;онлайн-оценки</div>
+        <form class="modals__form" action="/app/mail/">
+            <label class="modals__field field">
+                <input class="field__input" placeholder="Ваше имя" type="text" />
+            </label>
+            <div class="modals__field field js-field">
+                <input class="field__input field__input_hidden" placeholder="Ваше телефон" name="phone" type="tel" autocomplete="off" />
+                <input class="field__input field__input_hidden" placeholder="Ваше email" name="email" type="email" />
+                <div class="field__bottom flex flex_right">
+                    <a class="field__link js-change-email" data-show="Хочу указать Email" data-hide="Хочу указать телефон"></a>
+                </div>
+            </div>
+            <div class="modals__field field js-field">
+                <textarea class="field__input field__input_textarea" placeholder="Комментарий"></textarea>
+            </div>
+            <div class="modals__field">
+                <label class="modals__checkbox checkbox">
+                    <input class="checkbox__input" type="checkbox" checked="checked" /><span class="checkbox__icon"></span><span class="checkbox__text">Я согласен с&nbsp;Правилами обработки и&nbsp;хранения персональных данных.</span>
+                </label>
+            </div>
+            <div class="modals__file file js-file">
+                <input class="file__input js-file-input" type="file" />
+                <div class="file__btn">
+                    <div class="file__icon">
+                        <svg class="icon icon-upload" viewBox="0 0 24 24">
+                            <use xlink:href="/app/icons/sprite.svg#upload"></use>
+                        </svg>
+                    </div>
+                    <div class="file__text js-file-name">Загрузить фото</div>
+                </div>
+            </div>
+            <div class="modals__messengers messengers">
+                <label class="messengers__btn">
+                    <input class="messengers__input" type="radio" name="messenger" value="Whatsapp" /><span class="messengers__text">Whatsapp</span>
+                </label>
+                <label class="messengers__btn">
+                    <input class="messengers__input" type="radio" name="messenger" value="Telegram" /><span class="messengers__text">Telegram</span>
+                </label>
+                <label class="messengers__btn">
+                    <input class="messengers__input" type="radio" name="messenger" value="Viber" /><span class="messengers__text">Viber</span>
+                </label>
+            </div>
+            <div class="modals__field">
+                <button class="modals__btn btn"><span class="btn__text">Оценить сумку</span>
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="modals modals_left mfp-hide" id="buy">
+        <div class="modals__close js-close-modal">
+            <div class="modals__close-text">ЗАКРЫТЬ</div>
+            <div class="modals__close-icon">
+                <svg class="icon icon-close" viewBox="0 0 24 24">
+                    <use xlink:href="/app/icons/sprite.svg#close"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="modals__title h4">Купить сумку</div>
+        <div class="modals__desc">Оставьте заявку и&nbsp;мы свяжемся с&nbsp;вами</div>
+        <form class="modals__form" action="/app/mail/">
+            <label class="modals__field field">
+                <input class="field__input" placeholder="Ваше имя" type="text" />
+            </label>
+            <div class="modals__field field js-field">
+                <input class="field__input field__input_hidden" placeholder="Ваше телефон" name="phone" type="tel" autocomplete="off" />
+                <input class="field__input field__input_hidden" placeholder="Ваше email" name="email" type="email" />
+                <div class="field__bottom flex flex_right">
+                    <a class="field__link js-change-email" data-show="Хочу указать Email" data-hide="Хочу указать телефон"></a>
+                </div>
+            </div>
+            <div class="modals__field field js-field">
+                <textarea class="field__input field__input_textarea" placeholder="Комментарий"></textarea>
+            </div>
+            <div class="modals__field">
+                <label class="modals__checkbox checkbox">
+                    <input class="checkbox__input" type="checkbox" checked="checked" /><span class="checkbox__icon"></span><span class="checkbox__text">Я согласен с&nbsp;Правилами обработки и&nbsp;хранения персональных данных.</span>
+                </label>
+            </div>
+            <button class="modals__btn btn"><span class="btn__text">Купить сумку</span>
+            </button>
+        </form>
+    </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="/app/js/app.js?v=1646384065628"></script>
+    <script src="/app/js/app.js?v=1646404431342"></script>
 </body>
 
 </html>

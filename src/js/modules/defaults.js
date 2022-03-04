@@ -48,10 +48,27 @@ var defaults = {
 		
 	},
 
+	toggleField: (e) => {
+		
+		$(e.currentTarget).toggleClass('is-active');
+		$(e.currentTarget).closest('.js-field').toggleClass('is-active');
+		
+	},
+
+	changeFile: (e) => {
+		
+		let fileName = e.target.files[0].name;
+
+		$(e.currentTarget).closest('.js-file').find('.js-file-name').text(fileName);
+		
+	},
+
 	init: () => {
 
 		defaults.events();
 		$(document).on('click', '.js-burger', defaults.toggleMobile);
+		$(document).on('click', '.js-change-email', defaults.toggleField);
+		$(document).on('change', '.js-file-input', defaults.changeFile);
 
 		$('.js-mobile-close').click(function(){
 			$('.js-burger').click();
