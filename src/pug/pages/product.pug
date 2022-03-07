@@ -1,0 +1,86 @@
+
+extends ../layouts/base
+
+append vars
+	- title = 'Product';
+
+block content
+	.wrap
+		+b.breadcrumbs
+			+e.UL.list.flex._center
+				+e.LI.item
+					+e.A.link(href="#") Главная
+				+e.LI.item
+					+e.A.link(href="#") Каталог
+				+e.LI.item Hermes Birkin 35 Crocodile
+	include ../sections/section-product
+	- 
+		var SliderProducts = {
+			slidesPerView: 4,
+			loop: true,
+			speed: 350,
+			spaceBetween: 30,
+			breakpoints: {
+				0: {
+					slidesPerView: 1,
+					spaceBetween: 10
+				},
+				580: {
+					slidesPerView: 3,
+					spaceBetween: 20
+				},
+				820: {
+					slidesPerView: 4,
+					spaceBetween: 30
+				}
+			},
+		}
+	+b.SECTION.similar-products._small
+		+e.wrap.wrap._big
+			+e.H2.title.h3 Похожие товары
+			+e.slider
+				+swiper-navigation(class="_no-border similar-products__swiper-nav_big")
+				+e.slider-container.swiper-container.js-slider#products(data-settings=SliderProducts)
+					.swiper-wrapper
+						+e.slide.swiper-slide
+							+e.item.item-product__
+								+e.head
+									+e.stock В наличии
+									+e.A.preview(href="#")
+										img(src="/img/products__img1.png")
+									+btn(class="_small js-modal" href="#buy") Купить
+								+e.A.name(href="#") Hermès 1990-2000s Pre-owned Touareg Clutch Bag - Black
+								+e.prices.flex
+									+e.price 8 400 $
+									+e.price._old 9 800 $
+						+e.slide.swiper-slide
+							+e.A.item.item-product__(href="#")
+								+e.preview
+									img(src="/img/products__img2.png")
+								+e.name Hermès 1990-2000s Pre-owned Touareg Clutch Bag - Black
+								+e.prices.flex
+									+e.price 8 400 $
+						+e.slide.swiper-slide
+							+e.A.item.item-product__(href="#")
+								+e.preview
+									img(src="/img/products__img3.png")
+								+e.name Hermès 1990-2000s Pre-owned Touareg Clutch Bag - Black
+								+e.prices.flex
+									+e.price 8 400 $
+						+e.slide.swiper-slide
+							+e.A.item.item-product__(href="#")
+								+e.preview
+									img(src="/img/products__img4.png")
+								+e.name Hermès 1990-2000s Pre-owned Touareg Clutch Bag - Black
+								+e.prices.flex
+									+e.price 8 400 $
+	+b.banner-sell
+		+e.inner
+			+e.H2.title Хочу Продать сумку Hermes
+			+e.desc
+				| Платим до 85% от начальной стоимости. 
+				br
+				| Узнайте цену за 15 минут, не выходя из дома
+			+btn(class="js-modal" href="#online") Продать сумку
+		+e.img
+			img(src="/img/banner-sell__img.png")

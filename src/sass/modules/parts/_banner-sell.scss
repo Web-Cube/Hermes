@@ -1,0 +1,91 @@
+.banner-sell {
+	max-width: 1680px;
+	margin: 0 auto;
+	background: #F8F5EF;
+	position: relative;
+	overflow: hidden;
+	min-height: 500rem;
+	padding: 60rem 140rem;
+
+	@include mackbook {
+		max-width: inherit;
+		padding-left: 20px;
+	}
+
+	@include large-desktop {
+		min-height: inherit;
+	}
+
+	@include large-mobile {
+		padding-right: 20px;
+	}
+
+	&__inner {
+		max-width: 500rem;
+		@include large-mobile {
+			max-width: none;
+		}
+	}
+
+	&__title {
+		font-family: 'Forum';
+		font-weight: normal;
+		font-size: 64rem;
+		text-transform: uppercase;
+		line-height: 120%;
+		letter-spacing: 0.08em;
+
+		@include large-desktop {
+			font-size: 48rem;
+		}
+
+		@include large-mobile {
+			font-size: 32rem;
+		}
+	}
+
+	&__desc {
+		margin-top: 40rem;
+		@include large-desktop {
+			margin-top: 20rem;
+		}
+
+		@include large-mobile {
+			font-size: 14rem;
+		}
+	}
+
+	&__btn {
+		min-width: 242rem;
+		margin-top: 40rem;
+		@include large-desktop {
+			margin-top: 30rem;
+		}
+
+		@include large-mobile {
+			min-width: 200rem;
+		}
+	}
+
+	&__img {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: 825rem;
+		img {
+			mix-blend-mode: darken;
+		}
+
+		@include large-desktop {
+			width: 660rem;
+		}
+
+		@include small-tablet {
+			right: -100rem;
+		}
+
+		@include large-mobile(100) {
+			display: none;
+		}
+	}
+}

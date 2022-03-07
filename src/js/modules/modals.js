@@ -70,29 +70,6 @@ var modals = {
 
 		$(document).on('click', '.js-modal', modals.open);
 
-		/*$(window).on('load', function(){
-			$.magnificPopup.open({
-				tClose: 'Закрыть',
-				removalDelay: 600,
-				fixedContentPos: true,
-				fixedBgPos: true,
-				overflowY: 'hidden',			
-				closeMarkup: '',
-				mainClass: 'css-modal-animate',				
-				items: {
-					src: "#buy",
-					type: 'inline'
-				},
-				callbacks: {
-					beforeOpen: () => {
-					},
-
-					beforeClose: () => {
-					}
-				}
-			}, 0);
-		});*/
-
 	}
 
 };

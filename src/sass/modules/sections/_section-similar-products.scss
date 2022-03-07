@@ -1,8 +1,27 @@
 .similar-products {
 	padding: 80rem 0;
+	overflow: hidden;
+
+	&_small {
+		padding: 120rem 0;
+		.similar-products {
+			&__slider {
+				margin-top: 40rem;
+			}
+		}
+	}
 
 	@include large-mobile {
 		padding: 30rem 0;
+
+		&_small {
+			padding: 70rem 0;
+			.similar-products {
+				&__slider {
+					margin-top: 30rem;
+				}
+			}
+		}
 	}
 
 	&__title {
@@ -44,13 +63,13 @@
 			top: 200rem;
 		}
 
-		@include large-tablet {
-			top: 140rem;
-		}
-
-		@include small-tablet {
+		@include mackbook {
 			left: -20rem;
 			width: calc( 100% + 40rem );
+		}
+
+		@include large-tablet {
+			top: 140rem;
 		}
 
 		@include large-mobile {

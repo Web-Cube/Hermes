@@ -4,7 +4,7 @@
 	justify-content: center;
 	border: none;
 	cursor: pointer;
-	color: #fff;
+	color: #ECE9E3;
 	padding: 0 20rem;
 	transition: ease .2s;
 	background: $black;
@@ -23,8 +23,19 @@
 		background: $orange;
 	}
 
+	&_small {
+		height: 30rem;
+		font-size: 12rem;
+		font-weight: 500;
+	}
+
 	@include large-mobile {
 		height: 50rem;
 		font-size: 14rem;
+		&_small {
+			height: 30rem;
+			font-size: 12rem;
+			font-weight: 500;
+		}
 	}
 }

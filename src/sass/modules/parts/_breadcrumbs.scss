@@ -1,0 +1,49 @@
+.breadcrumbs {
+	margin-top: 40rem;
+	
+	&__list {
+		list-style: none;
+		font-size: 14rem;
+		line-height: 17/14*1;
+		font-weight: normal;
+		color: #656565;
+	}
+	a {
+		&:hover {
+			color: $orange;
+		}
+	}
+	&__item {
+		display: flex;
+		align-items: center;
+		&:not(:first-child) {
+			margin-left: 8rem;
+			&:before {
+				content: '';
+				display: block;
+				height: 12rem;
+				width: 1px;
+				background: #656565;
+				margin-right: 8rem;
+				position: relative;
+				top: -1px;
+			}
+		}
+	}
+
+	@include large-mobile {
+		overflow: hidden;
+		margin-left: -20px;
+		margin-right: -20px;
+		margin-top: 25rem;
+		&__list {
+			white-space: nowrap;
+			flex-wrap: nowrap;
+			padding: 0 20px;
+			margin-bottom: -40px;
+			padding-bottom: 40px;
+			overflow-x: auto;
+			justify-content: flex-start;
+		}
+	}
+}

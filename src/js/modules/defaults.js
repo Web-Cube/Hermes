@@ -63,12 +63,28 @@ var defaults = {
 		
 	},
 
+	thumbnails: (e) => {
+		
+		let index = $(e.currentTarget).index();
+
+		if ( $(e.currentTarget).hasClass('is-active') ) {
+
+		} else {
+			$('.js-product-thumb.is-active, .js-product-img.is-active').removeClass('is-active');
+			$(e.currentTarget).addClass('is-active');
+
+			$('.js-product-img:eq(' +index+ ')').addClass('is-active');
+		}
+		
+	},
+
 	init: () => {
 
 		defaults.events();
 		$(document).on('click', '.js-burger', defaults.toggleMobile);
 		$(document).on('click', '.js-change-email', defaults.toggleField);
 		$(document).on('change', '.js-file-input', defaults.changeFile);
+		$(document).on('click', '.js-product-thumb', defaults.thumbnails);
 
 		$('.js-mobile-close').click(function(){
 			$('.js-burger').click();
