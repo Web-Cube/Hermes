@@ -1,0 +1,255 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Catalog';
+
+block content
+	.wrap
+		+b.breadcrumbs
+			+e.UL.list.flex._center
+				+e.LI.item
+					+e.A.link(href="#") Главная
+				+e.LI.item Каталог
+	+b.SECTION.catalog
+		+e.wra.wrap._big
+			+e.H1.title.h4 Каталог сумок Hermes
+			+e.filter.filter__
+				+e.row.flex
+					+e.column
+						+e.select.select__.js-select
+							input.js-select-input(name="model" value="" type="hidden")
+							+e.head.js-select-head
+								+e.title
+									+e.SPAN.text Модель: 
+									+e.SPAN.label.js-select-label Birkin
+								+e.arrow
+									+icon('dropDown')
+							+e.body._big
+								+e.check-list.flex
+									+e.LABEL.checkbox.checkbox__
+										+e.INPUT.input(type="checkbox" checked)
+										+e.icon
+										+e.text Birkin
+									+e.LABEL.checkbox.checkbox__
+										+e.INPUT.input(type="checkbox")
+										+e.icon
+										+e.text Kelly
+									+e.LABEL.checkbox.checkbox__
+										+e.INPUT.input(type="checkbox")
+										+e.icon
+										+e.text Evelyne
+									+e.LABEL.checkbox.checkbox__
+										+e.INPUT.input(type="checkbox")
+										+e.icon
+										+e.text Текс текст текст
+									+e.LABEL.checkbox.checkbox__
+										+e.INPUT.input(type="checkbox")
+										+e.icon
+										+e.text Birkin
+									+e.LABEL.checkbox.checkbox__
+										+e.INPUT.input(type="checkbox")
+										+e.icon
+										+e.text Kelly
+									+e.LABEL.checkbox.checkbox__
+										+e.INPUT.input(type="checkbox")
+										+e.icon
+										+e.text Evelyne
+									+e.LABEL.checkbox.checkbox__
+										+e.INPUT.input(type="checkbox")
+										+e.icon
+										+e.text Evelyne
+									+e.LABEL.checkbox.checkbox__
+										+e.INPUT.input(type="checkbox")
+										+e.icon
+										+e.text Текс текст текст
+									+e.LABEL.checkbox.checkbox__
+										+e.INPUT.input(type="checkbox")
+										+e.icon
+										+e.text Birkin
+									+e.LABEL.checkbox.checkbox__
+										+e.INPUT.input(type="checkbox")
+										+e.icon
+										+e.text Kelly
+					+e.column
+						+e.select.select__.js-select
+							input.js-select-input(name="status" value="" type="hidden")
+							+e.head.js-select-head
+								+e.title
+									+e.SPAN.text Cостояние: 
+									+e.SPAN.label.js-select-label б/у
+								+e.arrow
+									+icon('dropDown')
+							+e.body._big
+								+e.check-list.flex
+									+e.LABEL.checkbox.checkbox__.js-select-item(data-value="б/у")
+										+e.INPUT.input(type="radio" name="status" checked)
+										+e.icon
+										+e.text б/у
+									+e.LABEL.checkbox.checkbox__.js-select-item(data-value="новое")
+										+e.INPUT.input(type="radio" name="status")
+										+e.icon
+										+e.text новое
+					+e.column
+						+e.select.select__.js-select
+							input.js-select-input(name="material" value="" type="hidden")
+							+e.head.js-select-head
+								+e.title
+									+e.SPAN.text Материал: 
+									+e.SPAN.label.js-select-label кожа крокодила
+								+e.arrow
+									+icon('dropDown')
+							+e.body._big
+								+e.check-list.flex
+									+e.LABEL.checkbox.checkbox__
+										+e.INPUT.input(type="checkbox" checked)
+										+e.icon
+										+e.text кожа крокодила
+									+e.LABEL.checkbox.checkbox__
+										+e.INPUT.input(type="checkbox")
+										+e.icon
+										+e.text кожа слона
+					+e.column
+						+e.select.select__.js-select
+							input.js-select-input(name="size" value="" type="hidden")
+							+e.head.js-select-head
+								+e.title
+									+e.SPAN.text Размер: 
+									+e.SPAN.label.js-select-label 20-50
+									span  см
+								+e.arrow
+									+icon('dropDown')
+							+e.body._big
+								+e.range-slider.range-slider__.js-calc(data-min="20" data-max="50")
+									.ui-slider-handle
+										+e.text
+											span.js-calc-from 20
+											span  см
+									.ui-slider-handle
+										+e.text
+											span.js-calc-to 50
+											span  см
+					+e.column
+						+e.select.select__.js-select
+							input.js-select-input(name="model" value="" type="hidden")
+							+e.head.js-select-head
+								+e.title
+									+e.SPAN.text Цена: 
+									+e.SPAN.label.js-select-label по убыванию
+								+e.arrow
+									+icon('dropDown')
+							+e.body._big
+								+e.check-list.flex
+									+e.LABEL.checkbox.checkbox__.js-select-item(data-value="по убыванию")
+										+e.INPUT.input(type="radio" name="price" checked)
+										+e.icon
+										+e.text по убыванию
+									+e.LABEL.checkbox.checkbox__.js-select-item(data-value="по возрастанию")
+										+e.INPUT.input(type="radio" name="price")
+										+e.icon
+										+e.text по возрастанию
+
+			+e.list.flex
+				+e.item.item-product__
+					+e.head
+						+e.stock В наличии
+						+e.A.preview(href="#")
+							img(src="/img/products__img1.png")
+						+btn(class="_small js-modal" href="#buy") Купить
+					+e.A.name(href="#") Hermès 1990-2000s Touareg Clutch Bag - Black
+					+e.prices.flex
+						+e.price 8 400 $
+						+e.price._old 9 800 $
+				+e.A.item.item-product__(href="#")
+					+e.preview
+						img(src="/img/products__img2.png")
+					+e.name Hermès Hermès 2014 Egee Clutch - Pink Color
+					+e.prices.flex
+						+e.price 12 600 $
+				+e.A.item.item-product__(href="#")
+					+e.preview
+						img(src="/img/products__img3.png")
+					+e.name Hermès Hermès 2015 Kelly Retourné 32 Bag - White Color
+					+e.prices.flex
+						+e.price 18 000 $
+				+e.A.item.item-product__(href="#")
+					+e.preview
+						img(src="/img/products__img4.png")
+					+e.name Hermès Hermès Jypsiere Shoulder Bag - Blue
+					+e.prices.flex
+						+e.price 8 400 $
+				+e.A.item.item-product__(href="#")
+					+e.preview
+						img(src="/img/products__img5.png")
+					+e.name Hermès Hermès 1988 Pre-owned Tri-colour Kelly 28 Bag - Green Color Collection
+					+e.prices.flex
+						+e.price 8 400 $
+				+e.A.item.item-product__(href="#")
+					+e.preview
+						img(src="/img/products__img6.png")
+					+e.name Hermès Hermès 2014 Birkin Ghillies Tote Bag - Purple
+					+e.prices.flex
+						+e.price 8 400 $
+				+e.A.item.item-product__(href="#")
+					+e.preview
+						img(src="/img/products__img7.png")
+					+e.name Hermès Hermès 2020 Kelly 35 Sellier
+					+e.prices.flex
+						+e.price 8 400 $
+				+e.A.item.item-product__(href="#")
+					+e.preview
+						img(src="/img/products__img8.png")
+					+e.name Hermès Hermès 2018 Pre-owned Slip Fastening Shoulder Bag Pink Night
+					+e.prices.flex
+						+e.price 8 400 $
+				+e.item.item-product__
+					+e.head
+						+e.stock В наличии
+						+e.A.preview(href="#")
+							img(src="/img/products__img1.png")
+						+btn(class="_small js-modal" href="#buy") Купить
+					+e.A.name(href="#") Hermès 1990-2000s Touareg Clutch Bag - Black
+					+e.prices.flex
+						+e.price 8 400 $
+						+e.price._old 9 800 $
+				+e.A.item.item-product__(href="#")
+					+e.preview
+						img(src="/img/products__img2.png")
+					+e.name Hermès Hermès 2014 Egee Clutch - Pink Color
+					+e.prices.flex
+						+e.price 12 600 $
+				+e.A.item.item-product__(href="#")
+					+e.preview
+						img(src="/img/products__img3.png")
+					+e.name Hermès Hermès 2015 Kelly Retourné 32 Bag - White Color
+					+e.prices.flex
+						+e.price 18 000 $
+				+e.A.item.item-product__(href="#")
+					+e.preview
+						img(src="/img/products__img4.png")
+					+e.name Hermès Hermès Jypsiere Shoulder Bag - Blue
+					+e.prices.flex
+						+e.price 8 400 $
+				+e.A.item.item-product__(href="#")
+					+e.preview
+						img(src="/img/products__img5.png")
+					+e.name Hermès Hermès 1988 Pre-owned Tri-colour Kelly 28 Bag - Green Color Collection
+					+e.prices.flex
+						+e.price 8 400 $
+				+e.A.item.item-product__(href="#")
+					+e.preview
+						img(src="/img/products__img6.png")
+					+e.name Hermès Hermès 2014 Birkin Ghillies Tote Bag - Purple
+					+e.prices.flex
+						+e.price 8 400 $
+				+e.A.item.item-product__(href="#")
+					+e.preview
+						img(src="/img/products__img7.png")
+					+e.name Hermès Hermès 2020 Kelly 35 Sellier
+					+e.prices.flex
+						+e.price 8 400 $
+				+e.A.item.item-product__(href="#")
+					+e.preview
+						img(src="/img/products__img8.png")
+					+e.name Hermès Hermès 2018 Pre-owned Slip Fastening Shoulder Bag Pink Night
+					+e.prices.flex
+						+e.price 8 400 $

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <title>Product</title>
-    <link rel="stylesheet" href="/app/css/app.css?v=1646644548626">
+    <link rel="stylesheet" href="/app/css/app.css?v=1646740387062">
     <script>
         function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
     </script>
@@ -18,16 +18,46 @@
             <div class="header__top">
                 <div class="header__row flex flex_vertical flex_justify">
                     <div class="header__column header__column_left flex flex_vertical"><a class="header__email color-gray" href="mailto:zakaz@sumki-hermes.ru">zakaz@sumki-hermes.ru</a>
-                        <div class="header__select select">
-                            <div class="select__arrow">
-                                <svg class="icon icon-dropDown" viewBox="0 0 20 20">
-                                    <use xlink:href="/app/icons/sprite.svg#dropDown"></use>
-                                </svg>
+                        <div class="header__select select select_default js-select">
+                            <input class="js-select-input" name="currency" value="Рубли" type="hidden">
+                            <div class="select__head js-select-head">
+                                <div class="select__title">
+                                    <div class="select__label js-select-label">Рубли</div>
+                                </div>
+                                <div class="select__arrow">
+                                    <svg class="icon icon-dropDown" viewBox="0 0 20 20">
+                                        <use xlink:href="/app/icons/sprite.svg#dropDown"></use>
+                                    </svg>
+                                </div>
                             </div>
-                            <select name="currency">
-                                <option>Рубли</option>
-                                <option>Евро</option>
-                            </select>
+                            <div class="select__body select__body_small">
+                                <div class="select__list">
+                                    <div class="select__item js-select-item is-active" data-value="Рубли">
+                                        <div class="select__item-text">Рубли</div>
+                                        <div class="select__item-icon">
+                                            <svg class="icon icon-check" viewBox="0 0 24 24">
+                                                <use xlink:href="/app/icons/sprite.svg#check"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="select__item js-select-item" data-value="Доллары">
+                                        <div class="select__item-text">Доллары</div>
+                                        <div class="select__item-icon">
+                                            <svg class="icon icon-check" viewBox="0 0 24 24">
+                                                <use xlink:href="/app/icons/sprite.svg#check"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="select__item js-select-item" data-value="Евро">
+                                        <div class="select__item-text">Евро</div>
+                                        <div class="select__item-icon">
+                                            <svg class="icon icon-check" viewBox="0 0 24 24">
+                                                <use xlink:href="/app/icons/sprite.svg#check"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="header__column header__column_center flex flex_center">
@@ -443,7 +473,7 @@
         </form>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="/app/js/app.js?v=1646644548655"></script>
+    <script src="/app/js/app.js?v=1646740387095"></script>
 </body>
 
 </html>

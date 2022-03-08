@@ -1,0 +1,50 @@
+.filter {
+	position: relative;
+	padding: 10rem 0;
+	background: #F8F5EF;
+
+	@include large-mobile {
+		padding: 0;
+	}
+
+	&__column {
+		padding: 0 30rem;
+		&:not(:first-child) {
+			border-left: 1px solid #ECE9E3;
+		}
+		@include small-tablet {
+			padding: 0 0 0 20rem;
+			&:not(:first-child) {
+				border-left: 0;
+			}
+		}
+
+		@include large-mobile {
+			width: 100%;
+			padding: 0;
+			position: relative;
+			&:not(:first-child) {
+				border-top: 1px solid #ECE9E3;
+			}
+		}
+	}
+	.select {
+		font-weight: 500;
+		&__head {
+			min-height: 60rem;
+		}
+		@include small-tablet {
+			&__head {
+				min-height: 50rem;
+			}
+		}
+		@include large-mobile {
+			width: 100%;
+			display: block;
+			&__head {
+				justify-content: space-between;
+				padding: 0 16px;
+			}
+		}
+	}
+}

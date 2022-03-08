@@ -6,38 +6,32 @@ var defaults = {
 	events: () => {
 
 		$('.js-calc').each(function(){
-			$('#amount').slider({
-				range: "min",
-				min: 50000,
-				max: 1000000,
-				step: 1000,
-				value: 150000,
+			let min = $(this).data("min")*1;
+			let max = $(this).data("max")*1;
+
+			$(this).slider({
+				range: true,
+				min: min,
+				max: max,
+				values: [ min, max ],
 				slide: function( event, ui ) {
-					var amount = Math.round( ui.value * 1.035 );
-					var amountReturn = thousandSeparator( amount );
-					var amountPercent = amount - ui.value;
-					amountPercent = thousandSeparator( amountPercent );
+					$(this).closest('.js-select').find('.js-select-label').text( ui.values[ 0 ] + "-" + ui.values[ 1 ] );
+					$(this).closest('.js-select').find('.js-select-input').val( ui.values[ 0 ] + "-" + ui.values[ 1 ] + ' см' );
 
-					$('.js-amount').text(thousandSeparator( ui.value ));
-					$('.js-amount-return').text(amountReturn);
-					$('.js-amount-percent').text(amountPercent);
-					
-				}
-			});
-
-			$('#amountDate').slider({
-				range: "min",
-				min: 14,
-				max: 365,
-				step: 1,
-				value: 30,
-				slide: function( event, ui ) {
-
-					$('.js-amount-date').text( ui.value );
-					
+					$(this).find('.js-calc-from').text( ui.values[ 0 ] );
+					$(this).find('.js-calc-to').text( ui.values[ 1 ] );
 				}
 			});
 		});
+
+		// Клик вне select
+		const select = $('.js-select');
+		window.addEventListener('click', e => { // при клике в любом месте окна браузера
+		    const target = e.target // находим элемент, на котором был клик
+		    if (!target.closest('.js-select')) { // если этот элемент или его родительские элементы не окно навигации и не кнопка
+		      select.removeClass('is-active') // то закрываем окно навигации, удаляя активный класс
+		    }
+		})
 	},
 
 	toggleMobile: (e) => {
@@ -78,6 +72,33 @@ var defaults = {
 		
 	},
 
+	select: (e) => {
+
+		let parrent = $(e.currentTarget).parent();
+		
+		if ( parrent.hasClass('is-active') ) {
+			parrent.removeClass('is-active');
+		} else {
+			$('.js-select.is-active').removeClass('is-active');
+			parrent.addClass('is-active');
+		}
+		
+	},
+
+	selectItem: (e) => {
+
+		let value = $(e.currentTarget).data('value');
+		let text = $(e.currentTarget).text();
+		
+		$('.js-select-item.is-active').removeClass('is-active');
+		$(e.currentTarget).closest('.js-select').removeClass('is-active');
+		$(e.currentTarget).addClass('is-active');
+
+		$(e.currentTarget).closest('.js-select').find('.js-select-input').val(value);
+		$(e.currentTarget).closest('.js-select').find('.js-select-label').text(value);
+		
+	},
+
 	init: () => {
 
 		defaults.events();
@@ -85,6 +106,8 @@ var defaults = {
 		$(document).on('click', '.js-change-email', defaults.toggleField);
 		$(document).on('change', '.js-file-input', defaults.changeFile);
 		$(document).on('click', '.js-product-thumb', defaults.thumbnails);
+		$(document).on('click', '.js-select-head', defaults.select);
+		$(document).on('click', '.js-select-item', defaults.selectItem);
 
 		$('.js-mobile-close').click(function(){
 			$('.js-burger').click();

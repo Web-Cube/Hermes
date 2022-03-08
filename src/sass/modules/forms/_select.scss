@@ -1,30 +1,143 @@
 .select {
 	display: inline-flex;
-	position: relative;
-	cursor: pointer;
-	select {
-		display: block;
-		background: none;
-		/* for Firefox */
-		-moz-appearance: none;
-		/* for Chrome */
-		-webkit-appearance: none;
-		font-size: 16rem;
-		line-height: 120%;
-		font-family: inherit;
-		padding: 5rem 28rem 5rem 5rem;
-		border: 0;
-		cursor: pointer;
+	font-size: 16rem;
+	line-height: 120%;
+	font-weight: normal;
+
+	@include large-mobile {
+		font-size: 15rem;
+	}
+
+	&_default {
 		position: relative;
+
+		&.is-active {
+			z-index: 100;
+		}
+	}
+
+	&.is-active {
+		.select {
+			&__body {
+				opacity: 1;
+				visibility: visible;
+				transform: translateY(0);
+			}
+			&__arrow {
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	&__head {
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+	}
+	&__text {
+		color: #656565;
 	}
 
 	&__arrow {
-		position: absolute;
-		right: 0;
-		top: 50%;
 		width: 20rem;
 		height: 20rem;
-		margin-top: -10rem;
 		fill: $orange;
+		flex-shrink: 0;
+		margin-left: 4rem;
+		transition: ease .2s;
+	}
+
+	&__body {
+		position: absolute;
+		top: 100%;
+		transition: ease .2s;
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-10px);
+		&_small {
+			left: -16rem;
+			margin-top: 16rem;
+			min-width: 148rem;
+			width: calc( 100% + 32rem );
+			padding: 8rem 0;
+			background: #ECE9E3;
+			border: 1px solid rgba(27, 27, 27, 0.08);
+		}
+		&_big {
+			left: 0;
+			width: 100%;
+			z-index: 100;
+			background: #F8F5EF;
+			border-top: 1px solid rgba(27, 27, 27, 0.08);
+			border-bottom: 1px solid rgba(27, 27, 27, 0.08);
+			padding: 38rem 70rem 48rem 70rem;
+		}
+		@include small-tablet {
+			&_big {
+				padding-left: 20rem;
+				padding-right: 20rem;
+			}
+		}
+		@include large-mobile {
+			&_big {
+				padding: 24px 16px;
+			}
+		}
+	}
+
+	&__item {
+		padding: 7rem 16rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		cursor: pointer;
+		transition: ease .2s;
+		color: #656565;
+		&-icon {
+			width: 24rem;
+			height: 24rem;
+			flex-shrink: 0;
+			fill: $orange;transition: ease .2s;
+			opacity: 0;
+		}
+		&:hover {
+			color: $black;
+		}
+		&.is-active {
+			.select__item-icon {
+				opacity: 1;
+			}
+		}
+	}
+	&__check-list {
+		max-width: 50%;
+		margin-bottom: -30rem;
+
+		@include small-tablet {
+			max-width: inherit;
+		}
+		@include large-mobile {
+			margin-bottom: -20rem;
+		}
+	}
+	&__checkbox {
+		margin-right: 40rem;
+		margin-bottom: 30rem;
+		@include large-mobile {
+			width: 50%;
+			margin-right: 0;
+			margin-bottom: 20rem;
+		}
+	}
+
+	&__range-slider {
+		max-width: 350rem;
+		margin-top: 25rem;
+
+		@include small-tablet {
+			max-width: inherit;
+			margin-left: 18rem;
+			margin-right: 18rem;
+		}
 	}
 }

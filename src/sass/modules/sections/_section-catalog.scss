@@ -1,0 +1,43 @@
+.catalog {
+	margin-top: 20rem;
+	padding-bottom: 40rem;
+
+	@include large-mobile {
+		padding-bottom: 0;
+	}
+
+	&__title {
+		text-align: center;
+	}
+	&__filter {
+		margin-top: 40rem;
+	}
+
+	&__list {
+		margin-left: -30rem;
+		@include small-tablet {
+			margin-left: -20rem;
+		}
+
+		@include small-tablet {
+			margin-left: 0;
+		}
+	}
+
+	&__item {
+		width: calc( 25% - 30rem );
+		margin-left: 30rem;
+		margin-top: 40rem;
+
+		@include small-tablet {
+			width: calc( 33.33% - 20rem );
+			margin-left: 20rem;
+		}
+
+		@include large-mobile {
+			width: 100%;
+			margin-left: 0;
+			margin-top: 30rem;
+		}
+	}
+}

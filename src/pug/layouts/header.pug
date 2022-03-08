@@ -4,12 +4,27 @@
 			+e.row.flex._vertical._justify
 				+e.column._left.flex._vertical
 					+e.A.email.color-gray(href="mailto:zakaz@sumki-hermes.ru") zakaz@sumki-hermes.ru
-					+e.select.select__
-						+e.arrow
-							+icon('dropDown')
-						select(name="currency")
-							option Рубли
-							option Евро
+					+e.select.select__._default.js-select
+						input.js-select-input(name="currency" value="Рубли" type="hidden")
+						+e.head.js-select-head
+							+e.title
+								+e.label.js-select-label Рубли
+							+e.arrow
+								+icon('dropDown')
+						+e.body._small
+							+e.list
+								+e.item.js-select-item.is-active(data-value="Рубли")
+									+e.item-text Рубли
+									+e.item-icon
+										+icon('check')
+								+e.item.js-select-item(data-value="Доллары")
+									+e.item-text Доллары
+									+e.item-icon
+										+icon('check')
+								+e.item.js-select-item(data-value="Евро")
+									+e.item-text Евро
+									+e.item-icon
+										+icon('check')
 				+e.column._center.flex._center
 					+e.A.logo(href="#")
 						img(src="/app/img/logo.svg")

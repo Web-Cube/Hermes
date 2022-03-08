@@ -1,0 +1,36 @@
+.range-slider {
+	position: relative;
+	height: 1px;
+	background: rgba(27, 27, 27, 0.08);
+
+	.ui-slider-range {
+		position: absolute;
+		height: 1px;
+		top: 0;
+		background: #1B1B1B;
+	}
+	.ui-slider-handle {
+		position: absolute;
+		top: -8rem;
+		width: 16rem;
+		height: 16rem;
+		margin-left: -8rem;
+		border-radius: 100%;
+		z-index: 2;
+		cursor: pointer;
+		background: #656565;
+	}
+
+	&__text {
+		position: absolute;
+		width: 80rem;
+		text-align: center;
+		left: 50%;
+		bottom: 100%;
+		padding-bottom: 6rem;
+		font-size: 14rem;
+		line-height: 17/14*1;
+		font-weight: 500;
+		margin-left: -40rem;
+	}
+}
