@@ -1,5 +1,17 @@
 .item-post {
 	display: block;
+	&:hover {
+		.item-post {
+			&__title {
+				text-decoration: underline;
+			}
+			&__preview {
+				img {
+					transform: scale(1.1);
+				}
+			}
+		}
+	}
 	&__preview {
 		position: relative;
 		overflow: hidden;
@@ -7,6 +19,10 @@
 		display: block;
 		&_big {
 			padding-top: 540/446*100%;
+		}
+
+		img {
+			transition: ease .3s;
 		}
 
 		@include large-mobile {

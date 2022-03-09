@@ -8,6 +8,9 @@
 
 	&__title {
 		text-align: center;
+		@include large-mobile {
+			text-align: left;
+		}
 	}
 	&__filter {
 		margin-top: 40rem;

@@ -20,6 +20,19 @@
 		}
 	}
 
+	&:hover {
+		.item-product {
+			&__name {
+				text-decoration: underline;
+			}
+			&__preview {
+				img {
+					transform: scale(1.1);
+				}
+			}
+		}
+	}
+
 	&__preview {
 		display: block;
 		position: relative;
@@ -32,6 +45,7 @@
 		img {
 			max-height: 336rem;
 			mix-blend-mode: darken;
+			transition: ease .3s;
 		}
 
 		@include large-tablet {
