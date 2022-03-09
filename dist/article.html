@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
-    <title>Catalog</title>
-    <link rel="stylesheet" href="/app/css/app.css?v=1646815973792">
+    <title>Article</title>
+    <link rel="stylesheet" href="/app/css/app.css?v=1646815973366">
     <script>
         function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
     </script>
@@ -113,255 +113,92 @@
             <ul class="breadcrumbs__list flex flex_center">
                 <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a>
                 </li>
-                <li class="breadcrumbs__item">Каталог</li>
+                <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Новости</a>
+                </li>
+                <li class="breadcrumbs__item">Модель Hermеs Birkin стала самой популярной сумкой в&nbsp;Instagram</li>
             </ul>
         </div>
     </div>
-    <section class="catalog">
-        <div class="catalog__wra wrap wrap_big">
-            <h1 class="catalog__title h4">Каталог сумок Hermes</h1>
-            <div class="catalog__filter filter">
-                <div class="filter__row flex">
-                    <div class="filter__column">
-                        <div class="filter__select select js-select">
-                            <input class="js-select-input" name="model" value="" type="hidden">
-                            <div class="select__head js-select-head">
-                                <div class="select__title"><span class="select__text">Модель: </span><span class="select__label js-select-label">Birkin</span>
-                                </div>
-                                <div class="select__arrow">
-                                    <svg class="icon icon-dropDown" viewBox="0 0 20 20">
-                                        <use xlink:href="/app/icons/sprite.svg#dropDown"></use>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="select__body select__body_big">
-                                <div class="select__check-list flex">
-                                    <label class="select__checkbox checkbox">
-                                        <input class="checkbox__input" type="checkbox" checked="checked" /><span class="checkbox__icon"></span><span class="checkbox__text">Birkin</span>
-                                    </label>
-                                    <label class="select__checkbox checkbox">
-                                        <input class="checkbox__input" type="checkbox" /><span class="checkbox__icon"></span><span class="checkbox__text">Kelly</span>
-                                    </label>
-                                    <label class="select__checkbox checkbox">
-                                        <input class="checkbox__input" type="checkbox" /><span class="checkbox__icon"></span><span class="checkbox__text">Evelyne</span>
-                                    </label>
-                                    <label class="select__checkbox checkbox">
-                                        <input class="checkbox__input" type="checkbox" /><span class="checkbox__icon"></span><span class="checkbox__text">Текс текст текст</span>
-                                    </label>
-                                    <label class="select__checkbox checkbox">
-                                        <input class="checkbox__input" type="checkbox" /><span class="checkbox__icon"></span><span class="checkbox__text">Birkin</span>
-                                    </label>
-                                    <label class="select__checkbox checkbox">
-                                        <input class="checkbox__input" type="checkbox" /><span class="checkbox__icon"></span><span class="checkbox__text">Kelly</span>
-                                    </label>
-                                    <label class="select__checkbox checkbox">
-                                        <input class="checkbox__input" type="checkbox" /><span class="checkbox__icon"></span><span class="checkbox__text">Evelyne</span>
-                                    </label>
-                                    <label class="select__checkbox checkbox">
-                                        <input class="checkbox__input" type="checkbox" /><span class="checkbox__icon"></span><span class="checkbox__text">Evelyne</span>
-                                    </label>
-                                    <label class="select__checkbox checkbox">
-                                        <input class="checkbox__input" type="checkbox" /><span class="checkbox__icon"></span><span class="checkbox__text">Текс текст текст</span>
-                                    </label>
-                                    <label class="select__checkbox checkbox">
-                                        <input class="checkbox__input" type="checkbox" /><span class="checkbox__icon"></span><span class="checkbox__text">Birkin</span>
-                                    </label>
-                                    <label class="select__checkbox checkbox">
-                                        <input class="checkbox__input" type="checkbox" /><span class="checkbox__icon"></span><span class="checkbox__text">Kelly</span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="filter__column">
-                        <div class="filter__select select js-select">
-                            <input class="js-select-input" name="status" value="" type="hidden">
-                            <div class="select__head js-select-head">
-                                <div class="select__title"><span class="select__text">Cостояние: </span><span class="select__label js-select-label">б/у</span>
-                                </div>
-                                <div class="select__arrow">
-                                    <svg class="icon icon-dropDown" viewBox="0 0 20 20">
-                                        <use xlink:href="/app/icons/sprite.svg#dropDown"></use>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="select__body select__body_big">
-                                <div class="select__check-list flex">
-                                    <label class="select__checkbox checkbox js-select-item" data-value="б/у">
-                                        <input class="checkbox__input" type="radio" name="status" checked="checked" /><span class="checkbox__icon"></span><span class="checkbox__text">б/у</span>
-                                    </label>
-                                    <label class="select__checkbox checkbox js-select-item" data-value="новое">
-                                        <input class="checkbox__input" type="radio" name="status" /><span class="checkbox__icon"></span><span class="checkbox__text">новое</span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="filter__column">
-                        <div class="filter__select select js-select">
-                            <input class="js-select-input" name="material" value="" type="hidden">
-                            <div class="select__head js-select-head">
-                                <div class="select__title"><span class="select__text">Материал: </span><span class="select__label js-select-label">кожа крокодила</span>
-                                </div>
-                                <div class="select__arrow">
-                                    <svg class="icon icon-dropDown" viewBox="0 0 20 20">
-                                        <use xlink:href="/app/icons/sprite.svg#dropDown"></use>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="select__body select__body_big">
-                                <div class="select__check-list flex">
-                                    <label class="select__checkbox checkbox">
-                                        <input class="checkbox__input" type="checkbox" checked="checked" /><span class="checkbox__icon"></span><span class="checkbox__text">кожа крокодила</span>
-                                    </label>
-                                    <label class="select__checkbox checkbox">
-                                        <input class="checkbox__input" type="checkbox" /><span class="checkbox__icon"></span><span class="checkbox__text">кожа слона</span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="filter__column">
-                        <div class="filter__select select js-select">
-                            <input class="js-select-input" name="size" value="" type="hidden">
-                            <div class="select__head js-select-head">
-                                <div class="select__title"><span class="select__text">Размер: </span><span class="select__label js-select-label">20-50</span><span> см</span>
-                                </div>
-                                <div class="select__arrow">
-                                    <svg class="icon icon-dropDown" viewBox="0 0 20 20">
-                                        <use xlink:href="/app/icons/sprite.svg#dropDown"></use>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="select__body select__body_big">
-                                <div class="select__range-slider range-slider js-calc" data-min="20" data-max="50">
-                                    <div class="ui-slider-handle">
-                                        <div class="range-slider__text"><span class="js-calc-from">20</span><span> см</span>
-                                        </div>
-                                    </div>
-                                    <div class="ui-slider-handle">
-                                        <div class="range-slider__text"><span class="js-calc-to">50</span><span> см</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="filter__column">
-                        <div class="filter__select select js-select">
-                            <input class="js-select-input" name="model" value="" type="hidden">
-                            <div class="select__head js-select-head">
-                                <div class="select__title"><span class="select__text">Цена: </span><span class="select__label js-select-label">по&nbsp;убыванию</span>
-                                </div>
-                                <div class="select__arrow">
-                                    <svg class="icon icon-dropDown" viewBox="0 0 20 20">
-                                        <use xlink:href="/app/icons/sprite.svg#dropDown"></use>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="select__body select__body_big">
-                                <div class="select__check-list flex">
-                                    <label class="select__checkbox checkbox js-select-item" data-value="по&nbsp;убыванию">
-                                        <input class="checkbox__input" type="radio" name="price" checked="checked" /><span class="checkbox__icon"></span><span class="checkbox__text">по&nbsp;убыванию</span>
-                                    </label>
-                                    <label class="select__checkbox checkbox js-select-item" data-value="по&nbsp;возрастанию">
-                                        <input class="checkbox__input" type="radio" name="price" /><span class="checkbox__icon"></span><span class="checkbox__text">по&nbsp;возрастанию</span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="article">
+        <div class="article__wra wrap">
+            <div class="article__head">
+                <h1 class="article__title h3">Модель Hermеs Birkin стала самой популярной сумкой в&nbsp;Instagram</h1>
+                <div class="article__line"></div>
+                <div class="article__date">17 января, 2022</div>
             </div>
-            <div class="catalog__list flex">
-                <div class="catalog__item item-product">
-                    <div class="item-product__head">
-                        <div class="item-product__stock">В наличии</div>
-                        <a class="item-product__preview" href="#">
-                            <picture>
-                                <source type="image/webp" srcset="/app/img/products__img1.webp">
-                                    <img src="/app/img/products__img1.png" />
-                            </picture>
-                        </a><a class="item-product__btn btn btn_small js-modal" href="#buy"><span class="btn__text">Купить</span></a>
-                    </div><a class="item-product__name" href="#">Hermès 1990-2000s Touareg Clutch Bag - Black</a>
-                    <div class="item-product__prices flex">
-                        <div class="item-product__price">8 400 $</div>
-                        <div class="item-product__price item-product__price_old">9 800 $</div>
-                    </div>
-                </div><a class="catalog__item item-product" href="#"><span class="item-product__preview"><picture>
-		                            <source type="image/webp" srcset="/app/img/products__img2.webp">
-		                            <img src="/app/img/products__img2.png"  />
-		                        </picture></span><span class="item-product__name">Hermès Hermès 2014 Egee Clutch - Pink Color</span><span class="item-product__prices flex"><span class="item-product__price">12 600 $</span></span></a><a class="catalog__item item-product"
-                href="#"><span class="item-product__preview"><picture>
-		                            <source type="image/webp" srcset="/app/img/products__img3.webp">
-		                            <img src="/app/img/products__img3.png"  />
-		                        </picture></span><span class="item-product__name">Hermès Hermès 2015 Kelly Retourné 32 Bag - White Color</span><span class="item-product__prices flex"><span class="item-product__price">18 000 $</span></span></a><a class="catalog__item item-product"
-                href="#"><span class="item-product__preview"><picture>
-		                            <source type="image/webp" srcset="/app/img/products__img4.webp">
-		                            <img src="/app/img/products__img4.png"  />
-		                        </picture></span><span class="item-product__name">Hermès Hermès Jypsiere Shoulder Bag - Blue</span><span class="item-product__prices flex"><span class="item-product__price">8 400 $</span></span></a><a class="catalog__item item-product"
-                href="#"><span class="item-product__preview"><picture>
-		                            <source type="image/webp" srcset="/app/img/products__img5.webp">
-		                            <img src="/app/img/products__img5.png"  />
-		                        </picture></span><span class="item-product__name">Hermès Hermès 1988 Pre-owned Tri-colour Kelly 28 Bag - Green Color Collection</span><span class="item-product__prices flex"><span class="item-product__price">8 400 $</span></span></a>
-                <a
-                class="catalog__item item-product" href="#"><span class="item-product__preview"><picture>
-		                            <source type="image/webp" srcset="/app/img/products__img6.webp">
-		                            <img src="/app/img/products__img6.png"  />
-		                        </picture></span><span class="item-product__name">Hermès Hermès 2014 Birkin Ghillies Tote Bag - Purple</span><span class="item-product__prices flex"><span class="item-product__price">8 400 $</span></span>
-                    </a><a class="catalog__item item-product" href="#"><span class="item-product__preview"><picture>
-		                            <source type="image/webp" srcset="/app/img/products__img7.webp">
-		                            <img src="/app/img/products__img7.png"  />
-		                        </picture></span><span class="item-product__name">Hermès Hermès 2020 Kelly 35 Sellier</span><span class="item-product__prices flex"><span class="item-product__price">8 400 $</span></span></a><a class="catalog__item item-product"
-                    href="#"><span class="item-product__preview"><picture>
-		                            <source type="image/webp" srcset="/app/img/products__img8.webp">
-		                            <img src="/app/img/products__img8.png"  />
-		                        </picture></span><span class="item-product__name">Hermès Hermès 2018 Pre-owned Slip Fastening Shoulder Bag Pink Night</span><span class="item-product__prices flex"><span class="item-product__price">8 400 $</span></span></a>
-                    <div
-                    class="catalog__item item-product">
-                        <div class="item-product__head">
-                            <div class="item-product__stock">В наличии</div>
-                            <a class="item-product__preview" href="#">
-                                <picture>
-                                    <source type="image/webp" srcset="/app/img/products__img1.webp">
-                                        <img src="/app/img/products__img1.png" />
-                                </picture>
-                            </a><a class="item-product__btn btn btn_small js-modal" href="#buy"><span class="btn__text">Купить</span></a>
-                        </div><a class="item-product__name" href="#">Hermès 1990-2000s Touareg Clutch Bag - Black</a>
-                        <div class="item-product__prices flex">
-                            <div class="item-product__price">8 400 $</div>
-                            <div class="item-product__price item-product__price_old">9 800 $</div>
-                        </div>
-            </div><a class="catalog__item item-product" href="#"><span class="item-product__preview"><picture>
-		                            <source type="image/webp" srcset="/app/img/products__img2.webp">
-		                            <img src="/app/img/products__img2.png"  />
-		                        </picture></span><span class="item-product__name">Hermès Hermès 2014 Egee Clutch - Pink Color</span><span class="item-product__prices flex"><span class="item-product__price">12 600 $</span></span></a><a class="catalog__item item-product"
-            href="#"><span class="item-product__preview"><picture>
-		                            <source type="image/webp" srcset="/app/img/products__img3.webp">
-		                            <img src="/app/img/products__img3.png"  />
-		                        </picture></span><span class="item-product__name">Hermès Hermès 2015 Kelly Retourné 32 Bag - White Color</span><span class="item-product__prices flex"><span class="item-product__price">18 000 $</span></span></a><a class="catalog__item item-product"
-            href="#"><span class="item-product__preview"><picture>
-		                            <source type="image/webp" srcset="/app/img/products__img4.webp">
-		                            <img src="/app/img/products__img4.png"  />
-		                        </picture></span><span class="item-product__name">Hermès Hermès Jypsiere Shoulder Bag - Blue</span><span class="item-product__prices flex"><span class="item-product__price">8 400 $</span></span></a><a class="catalog__item item-product"
-            href="#"><span class="item-product__preview"><picture>
-		                            <source type="image/webp" srcset="/app/img/products__img5.webp">
-		                            <img src="/app/img/products__img5.png"  />
-		                        </picture></span><span class="item-product__name">Hermès Hermès 1988 Pre-owned Tri-colour Kelly 28 Bag - Green Color Collection</span><span class="item-product__prices flex"><span class="item-product__price">8 400 $</span></span></a>
-            <a
-            class="catalog__item item-product" href="#"><span class="item-product__preview"><picture>
-		                            <source type="image/webp" srcset="/app/img/products__img6.webp">
-		                            <img src="/app/img/products__img6.png"  />
-		                        </picture></span><span class="item-product__name">Hermès Hermès 2014 Birkin Ghillies Tote Bag - Purple</span><span class="item-product__prices flex"><span class="item-product__price">8 400 $</span></span>
-                </a><a class="catalog__item item-product" href="#"><span class="item-product__preview"><picture>
-		                            <source type="image/webp" srcset="/app/img/products__img7.webp">
-		                            <img src="/app/img/products__img7.png"  />
-		                        </picture></span><span class="item-product__name">Hermès Hermès 2020 Kelly 35 Sellier</span><span class="item-product__prices flex"><span class="item-product__price">8 400 $</span></span></a><a class="catalog__item item-product"
-                href="#"><span class="item-product__preview"><picture>
-		                            <source type="image/webp" srcset="/app/img/products__img8.webp">
-		                            <img src="/app/img/products__img8.png"  />
-		                        </picture></span><span class="item-product__name">Hermès Hermès 2018 Pre-owned Slip Fastening Shoulder Bag Pink Night</span><span class="item-product__prices flex"><span class="item-product__price">8 400 $</span></span></a>
         </div>
+        <div class="article__preview">
+            <picture>
+                <source type="image/webp" srcset="/app/img/post__img1.webp">
+                    <img src="/app/img/post__img1.jpg" />
+            </picture>
+        </div>
+        <div class="article__wra wrap">
+            <div class="article__content">
+                <section>
+                    <p>Hermes - сумки культовые и&nbsp;статусные. Это больше, чем просто аксессуар, свидетельствующий о&nbsp;высоком положении владельца в&nbsp;обществе. Это еще и&nbsp;стильная инвестиция, которую можно передать по&nbsp;наследству, выгодно
+                        продать на&nbsp;аукционе или&nbsp;хранить как коллекционный экземпляр.</p>
+                </section>
+                <section>
+                    <h2>Роскошь на&nbsp;века</h2>
+                    <p>Бизнес Hermes начался во Франции в&nbsp;1837 году с&nbsp;изготовления конской сбруи. В 1880 году к&nbsp;ассортименту фирмы добавились седла, и&nbsp;только в&nbsp;ХХ веке - сумки. Во главе угла для&nbsp;компании всегда стояли такие
+                        качества, как прочность и&nbsp;долговечность. Кожаные сумки Hermes можно передавать из&nbsp;поколения в&nbsp;поколение, не волнуясь насчет износа. Даже если через&nbsp;много лет кожа изделия потрется - это будет не изъян, а&nbsp;благородная
+                        винтажная потертость, которая только украсит аксессуар.</p>
+                    <p>Надо заметить, что винтажные сумки Hermes зачастую стоят дороже новых - особенно если речь идет об&nbsp;изделиях, выполненных по&nbsp;индивидуальному заказу, или&nbsp;отделанных драгоценными камнями и&nbsp;благородными металлами. Очереди
+                        на&nbsp;покупку таких сумок ничуть не меньше, чем на&nbsp;приобретение только что изготовленных аксессуаров.</p>
+                </section>
+                <section>
+                    <figure>
+                        <picture>
+                            <source type="image/webp" srcset="/app/img/post__img2.webp">
+                                <img src="/app/img/post__img2.jpg" />
+                        </picture>
+                        <figcaption>Hermès 2015 Kelly Retourné 32 Bag - White Color</figcaption>
+                    </figure>
+                </section>
+                <section>
+                    <p>В нашем автоматизированном мире главной роскошью стали изделия, изготовленные вручную. Этим, отчасти, и&nbsp;объясняется премиальная цена Birkin и&nbsp;Kelly: над&nbsp;каждым стежком мастера трудятся по&nbsp;старинке, с&nbsp;иглой
+                        в&nbsp;руках. Швейная машинка не способна на&nbsp;ту технику, которую сумки Hermes унаследовали от&nbsp;лошадиных седел. Нюанс заключается в&nbsp;том, что один и&nbsp;тот же шов прошивается одновременно двумя иголками.
+                        <br>Это трудоемкий процесс, который требует от&nbsp;мастера огромного опыта.
+                        <br>На изготовление одной сумки даже у&nbsp;самого квалифицированного сотрудника Hermes уходит не менее 40 часов.</p>
+                    <p>Надо заметить, что винтажные сумки Hermes зачастую стоят дороже новых - особенно если речь идет об&nbsp;изделиях, выполненных по&nbsp;индивидуальному заказу, или&nbsp;отделанных драгоценными камнями и&nbsp;благородными металлами. Очереди
+                        на&nbsp;покупку таких сумок ничуть не меньше, чем на&nbsp;приобретение только что изготовленных аксессуаров.</p>
+                </section>
+                <section>
+                    <figure>
+                        <picture>
+                            <source type="image/webp" srcset="/app/img/post__img3.webp">
+                                <img src="/app/img/post__img3.jpg" />
+                        </picture>
+                        <figcaption>Модель Birkin пользуется повышенным спросом в&nbsp;расцветке “голубой сапфир”</figcaption>
+                    </figure>
+                </section>
+                <section>
+                    <h2>Роскошь на&nbsp;века</h2>
+                    <p>Окрашивание натуральной кожи - процесс чрезвычайно деликатный. Особенно трудно получить качественные оттенки красного: алый, пурпурный, бордовый. Hermes освоили широчайшую палитру оттенков и&nbsp;выпускают продукцию всех цветов радуги.</p>
+                    <p>На аукционах и&nbsp;при перепродажах через&nbsp;магазины винтажа рекордных ценовых показателей достигают аксессуары розовых оттенков в&nbsp;частности, “розовая сакура” и&nbsp;“розовые конфетти”. Они особенно выигрышно смотрятся на&nbsp;компактных
+                        сумочках вроде Kelly 25 или&nbsp;Kelly Pochette. Глубину и&nbsp;благородство сине-голубых тонов в&nbsp;исполнении Hermes тоже трудно воспроизвести.</p>
+                    <p>Модель Birkin, например, пользуется повышенным спросом в&nbsp;расцветке “голубой сапфир”. Ну а&nbsp;что касается непосредственно красного, Hermes еще в&nbsp;прошлом веке разработали собственный уникальный оттенок Rouge H - аксессуары
+                        такого цвета с&nbsp;тех пор считаютсянаходкой для&nbsp;коллекционеров.</p>
+                </section>
+            </div>
+        </div>
+    </div>
+    <section class="similar-articles">
+        <div class="similar-articles__wrap wrap">
+            <h2 class="similar-articles__title h3">читайте другие статьи</h2>
+            <div class="similar-articles__list flex"><a class="similar-articles__item item-post" href="#"><span class="item-post__preview"><picture>
+		                            <source type="image/webp" srcset="/app/img/item-post__img4.webp">
+		                            <img src="/app/img/item-post__img4.jpg" class="object-fit" />
+		                        </picture></span><span class="item-post__title h5">Идеальный подарок для&nbsp;себя и&nbsp;близкой подруги: 5 модных сумок зимы 2021/2022</span><span class="item-post__date">13 сентября</span></a><a class="similar-articles__item item-post"
+                href="#"><span class="item-post__preview"><picture>
+		                            <source type="image/webp" srcset="/app/img/item-post__img5.webp">
+		                            <img src="/app/img/item-post__img5.jpg" class="object-fit" />
+		                        </picture></span><span class="item-post__title h5">Кража века в&nbsp;США: украдены редкие сумки Hermes</span><span class="item-post__date">13 сентября</span></a><a class="similar-articles__item item-post" href="#"><span class="item-post__preview"><picture>
+		                            <source type="image/webp" srcset="/app/img/item-post__img6.webp">
+		                            <img src="/app/img/item-post__img6.jpg" class="object-fit" />
+		                        </picture></span><span class="item-post__title h5">«Эффект COVID-19» настиг Hermes Birkin</span><span class="item-post__date">13 сентября</span></a>
+            </div>
         </div>
     </section>
     <footer class="footer">
@@ -551,7 +388,7 @@
         </form>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="/app/js/app.js?v=1646815973839"></script>
+    <script src="/app/js/app.js?v=1646815973387"></script>
 </body>
 
 </html>

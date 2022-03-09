@@ -1,0 +1,114 @@
+.article {
+	margin-top: 20rem;
+	@include large-mobile {
+		overflow: hidden;
+	}
+	&__head {
+		text-align: center;
+	}
+	&__title {
+		margin: 0 auto;
+		max-width: 924rem;
+		line-height: 105%;
+	}
+	&__line {
+		max-width: 100rem;
+		margin: 35rem auto 0 auto;
+		height: 1px;
+		background: $black;
+
+		@include large-mobile {
+			margin-top: 25rem;
+			width: 80rem;
+		}
+	}
+	&__date {
+		margin-top: 35rem;
+		color: #656565;
+		font-size: 16rem;
+		@include large-mobile {
+			margin-top: 25rem;
+			font-size: 15rem;
+		}
+	}
+
+	&__preview {
+		max-width: 1680px;
+		margin: 40rem auto 0 auto;
+		img {
+			width: 100%;
+		}
+
+		@include mackbook {
+			max-width: inherit;
+		}
+
+		@include large-mobile {
+			margin-top: 30rem;
+			margin-left: -10%;
+			margin-right: -10%;
+		}
+	}
+
+	&__content {
+		max-width: 924rem;
+		margin: 60rem auto 0 auto;
+		line-height: 150%;
+		font-weight: normal;
+		section {
+			&:not(:first-child) {
+				margin-top: 60rem;
+			}
+		}
+		p {
+			&:not(:first-child) {
+				margin-top: 24rem;
+			}
+		}
+		h2 {
+			font-size: 32rem;
+			font-weight: 600;
+			&:not(:first-child) {
+				margin-top: 32rem;
+			}
+		}
+
+		@include large-mobile {
+			margin-top: 40rem;
+			section {
+				&:not(:first-child) {
+					margin-top: 40rem;
+				}
+				p {
+					&:not(:first-child) {
+						margin-top: 20rem;
+					}
+				}
+				h2 {
+					font-size: 24rem;
+					&:not(:first-child) {
+						margin-top: 24rem;
+					}
+				}
+			}
+		}
+	}
+	figure {
+		display: block;
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+	figcaption {
+		display: block;
+		margin-top: 12rem;
+		font-size: 16rem;
+		line-height: 120%;
+
+		@include large-mobile {
+			margin-top: 10rem;
+			font-size: 14rem;
+		}
+	}
+}
