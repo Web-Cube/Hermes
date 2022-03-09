@@ -1,0 +1,44 @@
+.questions-form {
+	margin: 80rem auto 0 auto;
+	max-width: 1680px;
+	background: #F8F5EF;
+	padding: 80rem;
+	text-align: center;
+
+	@include mackbook {
+		max-width: none;
+	}
+
+	@include large-mobile {
+		margin-top: 60rem;
+		padding: 50rem 20px;
+	}
+	&__title {
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+
+		@include large-mobile {
+			letter-spacing: normal;
+		}
+	}
+
+	&__desc {
+		max-width: 690rem;
+		margin: 25rem auto 0 auto;
+		@include large-mobile {
+			margin-top: 10rem;
+		}
+	}
+
+	&__fields {
+		margin: 60rem auto 0 auto;
+		max-width: 320rem;
+		@include large-mobile {
+			margin-top: 30rem;
+			max-width: inherit;
+		}
+	}
+	&__btn {
+		width: 100%;
+	}
+}

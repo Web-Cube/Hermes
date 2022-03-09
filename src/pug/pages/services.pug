@@ -1,0 +1,52 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Services';
+
+block content
+	.wrap
+		+b.breadcrumbs
+			+e.UL.list.flex._center
+				+e.LI.item
+					+e.A.link(href="#") Главная
+				+e.LI.item Услуги
+	+b.SECTION.our-services
+		+e.wra.wrap
+			+e.H1.title.h2 Наши услуги
+			+e.list
+				+e.item
+					+e.item-column._left
+						+e.A.preview(href="service.html")
+							img.object-fit(src="/img/our-services__img1.jpg")
+							+e.SPAN.btn.btn__._small
+								+e.SPAN.text Подробнее
+					+e.item-column._right
+						+e.item-head
+							+e.number No. 1
+							+e.H2.item-title.h3 Экспертиза
+						+e.text Мы проводим быструю экспертизу сумок Hermes перед тем, как выкупим ее у вас. Это нужно чтобы гарантировать подлинность и озвучить точную цену покупки.
+				+e.item
+					+e.item-column._left
+						+e.preview
+							img.object-fit(src="/img/our-services__img2.jpg")
+					+e.item-column._right
+						+e.item-head
+							+e.number No. 2
+							+e.H2.item-title.h3 Выкуп сумок
+						+e.text Если вам необходимы в кротчайшие наличные, можно продать сумку Hermes Birkin. Мы дорого покупаем произведение французского искусства.
+				+e.item
+					+e.item-column._left
+						+e.preview
+							img.object-fit(src="/img/our-services__img3.jpg")
+					+e.item-column._right
+						+e.item-head
+							+e.number No. 3
+							+e.H2.item-title.h3 Продажа сумок
+						+e.text В случае, когда вам срочно нужны деньги, но вы не хотите навсегда избавляться от дорогой сумки Hermes, заложите ее сроком от одного дня до одного месяца.
+	+b.FORM.questions-form(action="/app/mail")
+		+e.H2.title.h3 Есть вопросы? Ответим!
+		+e.desc
+			| Оставьте заявку и наш сотрудник перезвонит, чтобы ответить на все интересующие вас вопросы
+		+e.fields
+			+field(name="phone" type="tel" placeholder="+7 (985) 555-55-45")
+			+btn(false) Перезвоните мне

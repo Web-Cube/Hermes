@@ -1,0 +1,88 @@
+.our-services {
+	margin-top: 60rem;
+
+	@include large-mobile {
+		margin-top: 30rem;
+	}
+	&__title {
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+	}
+
+	&__item {
+		margin-top: 40rem;
+		display: flex;
+		justify-content: space-between;
+		&-column {
+			width: 49%;
+			&_right {
+				border-top: 1px solid $black;
+				padding: 24rem 0 0 118rem;
+			}
+		}
+		&-head {
+			display: flex;
+		}
+		&-title {
+			line-height: 90%;
+		}
+
+		@include small-tablet {
+			&-column {
+				&_right {
+					padding-left: 30rem;
+				}
+			}
+		}
+
+		@include large-mobile {
+			margin-top: 30rem;
+			display: block;
+			padding-bottom: 10rem;
+			&-column {
+				width: 100%;
+				&_right {
+					border-top: 0;
+					padding: 20rem 0 0 0;
+				}
+			}
+		}
+	}
+
+	&__btn {
+		position: absolute;
+		z-index: 2;
+		right: 0;
+		bottom: 0;
+		min-width: 147rem;
+	}
+
+	&__preview {
+		position: relative;
+		overflow: hidden;
+		display: block;
+		padding-top: 400/685*100%;
+	}
+
+	&__number {
+		min-width: 58rem;
+		margin-right: 20rem;
+		color: #7E7E7E;
+		font-weight: normal;
+		line-height: 120%;
+		font-size: 20rem;
+		font-family: 'Forum';
+	}
+
+	&__text {
+		margin-top: 60rem;
+
+		@include small-tablet {
+			margin-top: 40rem;
+		}
+
+		@include large-mobile {
+			margin-top: 20rem;
+		}
+	}
+}
