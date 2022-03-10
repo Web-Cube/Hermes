@@ -1,0 +1,127 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Service';
+
+block content
+	.wrap
+		+b.breadcrumbs
+			+e.UL.list.flex._center
+				+e.LI.item
+					+e.A.link(href="#") Главная
+				+e.LI.item
+					+e.A.link(href="#") Услуги
+				+e.LI.item Экспертиза сумок Hermes
+	+b.SECTION.service
+		+e.preview
+			+e.preview-img
+				img(src="/img/service__preview.png")
+			+e.preview-logo
+				img(src="/img/service__logo.png")
+		+e.head
+			+e.wrap.wrap._small
+				+e.H1.title.h4 Экспертиза сумок Hermes
+				+e.content.content
+					p
+						| Если вы хотите узнать точную стоимость Вашей сумки или сделать проверку на подлинность, то вы можете обратиться в наш ломбард. Мы готовы провести профессиональную экспертизу Вашей сумки и проверить ее по всем параметрам..
+				+btn(class="js-modal" href="#online") Проверить сумку
+		+e.expert
+			+e.expert-column
+				+e.expert-img
+					img.object-fit(src="/img/service__img1.jpg")
+			+e.expert-column
+				+e.desc
+					+e.H2.desc-title.h4 Профессиональная 
+						br
+						| проверка сумок Hermes
+					+e.content.content
+						p
+							| Экспертиза сумок Hermes Birkin в нашем ломбарде нужна чтобы:
+						ol
+							li
+								span Продать сумку.
+								br
+								| Оценщик определяет подлинность сумки Hermes, выявляет дефекты и озвучивает стоимость, которую может предложить компания.
+							li
+								span Купить сумку.
+								br
+								| Вы можете приобрести подлинный Hermes по привлекательной цене.
+						p
+							| Оценивает опытный специалист и знаток особенностей сумок Hermes. При необходимости вы можете получить документальное свидетельство, подтверждающее озвученную оценщиком информаци, с перечислением выявленных дефектов.
+		+e.wrap.wrap
+			+e.list
+				+e.item
+					+e.item-desc
+						+e.H2.item-title.h4 Перед продажей 
+						+e.content.content
+							p
+								| Мы проводим быструю экспертизу сумок Hermes перед тем, как выкупим ее у вас. Это нужно чтобы гарантировать подлинность и озвучить точную цену покупки.
+							p 
+								| Подготовьте документы на сумку, если таковые есть. Если документов нет, эксперт определяет качество материала, из которого сделана сумка, выявляет особенности сумки Hermes, среди которых:
+							ul
+								li Кожа высочайшего класса.
+								li Ручное производство.
+								li Внешний вид соответствует высоким дизайнерским требованиям.
+							p
+								| Экспертиза занимает приблизительно 15 минут. Этого достаточно чтобы определить цену покупки вашей сумки.
+						+btn(class="js-modal" href="#online") Проверить сумку
+					+e.item-img
+						img(src="/img/service__img2.jpg")
+				+e.item
+					+e.item-desc
+						+e.H2.item-title.h4 Бесплатно
+						+e.content.content
+							p
+								| В нашем ломбарде экспертиза сумок Hermes проводится совершенно бесплатно. Вы не приобретаете никаких дополнительных обязательств. Если озвученная оценщиком сумма вас не устроит, просто откажитесь от продажи.
+							p
+								| Впрочем, мы заинтересованы в том, чтобы купить вашу сумку. Поэтому предлагаем за нее достойную цену.
+							p 
+								| Мы скупаем и продаем только подлинные сумки Hermes. При необходимости вы можете получить документальное подтверждение проведения экспертизы.
+						+btn(class="js-modal" href="#online") Проверить сумку
+					+e.item-img
+						img(src="/img/service__img3.jpg")
+		+e.estimate
+			+e.H2.estimate-title.h3 Оценить вашу сумку
+			+e.FORM.estimate-form.flex(action="/app/mail")
+				+e.estimate-column._small
+					+field(name="mark" placeholder="Марка")
+				+e.estimate-column._small
+					+field(name="date" placeholder="Год покупки" type="number")
+				+e.estimate-column._small
+					+field(name="amount" placeholder="Желаемая сумка")
+				+e.estimate-column._small
+					+field(name="name" placeholder="Ваше имя")
+				+e.estimate-column._small
+					+field(name="phone" type="tel" placeholder="+7 (985) 555-55-45")
+				+e.estimate-column._small
+					+field(name="email" type="email" placeholder="Email")
+				+e.estimate-column
+					+e.file.file__.js-file
+						+e.INPUT.input.js-file-input(type="file")
+						+e.btn
+							+e.icon
+								+icon('upload')
+							+e.text.js-file-name Загрузить фото
+					+e.estimate-text Максимальный размер файла 5mb (jpg, jpeg, png, pdf)
+				+e.estimate-column
+					+e.field.field__
+						+e.TEXTAREA.input._textarea(placeholder="Комментарий")
+					+e.LABEL.checkbox.checkbox__
+						+e.INPUT.input(type="checkbox" checked)
+						+e.icon
+						+e.text Я согласен с Правилами обработки и хранения персональных данных.
+				+e.estimate-column
+					+btn(false) Купить сумку
+		+e.wrap.wrap
+			+e.list
+				+e.item
+					+e.item-desc
+						+e.H2.item-title.h4 Как сделать экспертизу сумки Hermes?
+						+e.content.content
+							p
+								| Чтобы провести экспертизу вашей сумки достаточно посетить наш офис. Вы можете проконсультироваться с оценщиком чтобы просто продать сумку по выгодной цене или обменять на другую сумку Hermes. У нас большой выбор.
+							p 
+								| Дополнительные вопросы задайте консультантам по указанному на сайте номеру телефону. У нас работают только эксперты в области экспертизы сумок и это гарантирует определение истинной цены.
+						+btn(class="js-modal" href="#online") Оценить сумку
+					+e.item-img
+						img(src="/img/service__img4.jpg")

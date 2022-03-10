@@ -1,0 +1,306 @@
+.service {
+	margin-top: 60rem;
+	padding-bottom: 40rem;
+	@include large-mobile {
+		margin-top: 30rem;
+		padding-bottom: 0;
+	}
+	&__preview {
+		max-width: 1680px;
+		margin: 0 auto;
+		position: relative;
+		overflow: hidden;
+		&-logo {
+			position: absolute;
+			left: 40rem;
+			top: 30rem;
+			width: 167rem;
+			img {
+				width: 100%;
+			}
+		}
+
+		@include mackbook {
+			max-width: inherit;
+		}
+
+		@include small-tablet {
+			&-logo {
+				left: 20px;
+				top: 20rem;
+			}
+		}
+
+		@include large-mobile {
+			&-img {
+				margin-left: -35%;
+				margin-right: -35%;
+			}
+			&-logo {
+				top: 10rem;
+				width: 140px;
+			}
+		}
+	}
+	&__content {
+		margin-top: 32rem;
+		ul {
+			margin-left: 8rem;
+			list-style: none;
+			li {
+				margin-top: 0!important;
+				padding-left: 16rem;
+				position: relative;
+				&:before {
+					content: '·';
+					font-weight: 500;
+					position: absolute;
+					left: 0;
+					top: 0;
+				}
+			}
+		}
+
+		@include large-mobile {
+			margin-top: 20rem;
+		}
+	}
+
+	&__head {
+		text-align: center;
+		margin: 80rem auto 0 auto;
+		.btn {
+			min-width: 266rem;
+			margin-top: 40rem;
+		}
+
+		@include large-mobile {
+			margin-top: 60rem;
+			.btn {
+				margin-top: 30rem;
+			}
+		}
+	}
+
+	&__expert {
+		background: #F8F5EF;
+		padding: 30rem;
+		display: flex;
+		max-width: 1680px;
+		margin: 120rem auto 0 auto;
+		&-column {
+			&:first-child {
+				width: 585rem;
+				flex-shrink: 0;
+			}
+			&:nth-child(2) {
+				padding-left: 120rem;
+			}
+			.content {
+				max-width: 800rem;
+			}
+		}
+		&-img {
+			position: relative;
+			overflow: hidden;
+			padding-top: 622/585*100%;
+		}
+
+		@include mackbook {
+			max-width: inherit;
+			padding: 50rem;
+		}
+		@include large-tablet {
+			&-column {
+				&:nth-child(2) {
+					padding-left: 40rem;
+				}
+			}
+		}
+
+		@include small-tablet {
+			padding: 50rem 20px;
+			&-column {
+				&:first-child {
+					display: none;
+				}
+				&:nth-child(2) {
+					padding-left: 0;
+				}
+			}
+		}
+
+		@include large-mobile {
+			margin-top: 80rem;
+		}
+	}
+
+	&__desc {
+		&-title {
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+			line-height: 120%;
+		}
+
+		@include large-mobile {
+			&-title {
+				letter-spacing: 0.04em;
+			}
+		}
+	}
+
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 150rem;
+		&-desc {
+			width: 685rem;
+		}
+		&-img {
+			width: 566rem;
+		}
+		.btn {
+			min-width: 266rem;
+			margin-top: 40rem;
+		}
+		&-title {
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+			line-height: 120%;
+		}
+		&:nth-child(even) {
+			.service {
+				&__item {
+					&-desc {
+						order: 2;
+					}
+				}
+			}
+		}
+
+		@include large-tablet {
+			&-img {
+				width: 500rem;
+			}
+			&-desc {
+				width: 560rem;
+			}
+		}
+
+		@include small-tablet {
+			&-desc {
+				padding-right: 40rem;
+			}
+			&:nth-child(even) {
+				.service {
+					&__item {
+						&-desc {
+							padding-left: 40rem;
+						}
+					}
+				}
+			}
+		}
+
+		@include large-mobile {
+			margin-top: 70rem;
+			flex-wrap: wrap;
+			&-desc {
+				width: 100%;
+				padding-right: 0;
+				order: 2;
+			}
+			&-img {
+				width: 100%;
+				order: 1;
+				margin-bottom: 30rem;
+			}
+			&:nth-child(even) {
+				.service {
+					&__item {
+						&-desc {
+							padding-left: 0;
+						}
+					}
+				}
+			}
+			.btn {
+				margin-top: 30rem;
+			}
+		}
+	}
+
+	&__estimate {
+		max-width: 1680px;
+		margin: 120rem auto 0 auto;
+		padding: 90rem 140rem 70rem 140rem;
+		background: #F8F5EF;
+
+		&-title {
+			text-align: center;
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+		}
+
+		&-form {
+			margin: 0 -15rem;
+			padding-top: 20rem;
+		}
+
+		&-column {
+			width: 100%;
+			padding: 0 15rem;
+			margin-top: 40rem;
+			&_small {
+				width: 33.33%;
+			}
+		}
+
+		&-text {
+			margin-top: 16rem;
+			font-size: 16rem;
+			line-height: 120%;
+			color: #7E7E7E;
+		}
+
+		.btn {
+			min-width: 230rem;
+		}
+
+		@include mackbook {
+			max-width: inherit;
+		}
+
+		@include small-tablet {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+		@include large-mobile {
+			padding: 50rem 20px;
+			margin-top: 70rem;
+			&-form {
+				padding-top: 10rem;
+			}
+			&-column {
+				margin-top: 20rem;
+				&_small {
+					width: 100%;
+				}
+			}
+			.btn {
+				margin-top: 10rem;
+				width: 100%;
+			}
+			&-text {
+				font-size: 11rem;
+				font-weight: normal;
+				margin-top: 10rem;
+			}
+		}
+	}
+
+	&__checkbox {
+		margin-top: 16rem;
+	}
+}

@@ -1,0 +1,355 @@
+.about {
+	margin-top: 20rem;
+	padding-bottom: 80rem;
+	overflow: hidden;
+	@include large-mobile {
+		padding-bottom: 20rem;
+	}
+	&__title {
+		text-align: center;
+
+		@include large-mobile {
+			text-align: left;
+		}
+	}
+	&__preview {
+		max-width: 1680px;
+		margin: 60rem auto 0 auto;
+		img {
+			width: 100%;
+		}
+
+		@include mackbook {
+			max-width: inherit;
+		}
+
+		@include large-mobile {
+			margin-top: 30rem;
+			margin-left: -35%;
+			margin-right: -35%;
+		}
+	}
+
+	&__content {
+		margin-top: 80rem;
+		text-align: center;
+		h2 {
+			line-height: 105%;
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+		}
+		p {
+			font-weight: normal;
+		}
+
+		@include large-mobile {
+			margin-top: 60rem;
+			text-align: left;
+		}
+	}
+
+	&__column {
+		width: 50%;
+		&_left {
+			padding-right: 10rem;
+		}
+		&_right {
+			padding-left: 15rem;
+		}
+
+		@include large-mobile {
+			width: 100%;
+			&_left {
+				padding-right: 0;
+			}
+			&_right {
+				padding-left: 0;
+				margin-top: 40rem;
+			}
+		}
+	}
+
+	&__att {
+		display: flex;
+		margin-left: 50%;
+		margin-top: 120rem;
+		padding-left: 15rem;
+		font-weight: normal;
+		font-size: 16rem;
+		line-height: 120%;
+		font-weight: normal;
+		text-transform: uppercase;
+		color: $orange;
+		&:before {
+			content: '';
+			display: block;
+			width: 51rem;
+			height: 1px;
+			background: $orange;
+			flex-shrink: 0;
+			margin-right: 18rem;
+			margin-top: 8rem;
+		}
+
+		@include large-mobile {
+			margin-top: 60rem;
+			margin-left: 0;
+			padding-left: 0;
+			font-size: 14rem;
+			&:before {
+				width: 20rem;
+				margin-right: 10rem;
+				margin-top: 7rem;
+			}
+		}
+	}
+
+	&__sell {
+		margin-top: 60rem;
+	}
+
+	&__desc {
+		&-title {
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+			line-height: 120%;
+		}
+		&-text {
+			margin-top: 30rem;
+			p, li {
+				line-height: 150%;
+				font-size: 18rem;
+				font-weight: normal;
+			}
+		}
+		&_big {
+			margin-left: 118rem;
+			width: 566rem;
+		}
+		ol {
+			padding-top: 8rem;
+			list-style: none;
+			counter-reset: myCounter;
+			li {
+				position: relative;
+				padding-left: 48rem;
+				&:not(:first-child) {
+					margin-top: 32rem;
+				}
+				&:before {
+					counter-increment: myCounter;
+					content: counter(myCounter);
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					position: absolute;
+					left: 0;
+					top: -4rem;
+					width: 32rem;
+					height: 32rem;
+					background: #F8F5EF;
+					color: $orange;
+					line-height: 120%;
+					font-family: 'Forum';
+				}
+			}
+		}
+		@include large-tablet {
+			&_big {
+				margin-left: 50rem;
+				width: 480rem;
+			}
+		}
+
+		@include small-tablet {
+			&_big {
+				margin-left: 0;
+				width: auto;
+			}
+		}
+
+		@include large-mobile {
+			&-text {
+				margin-top: 20rem;
+				p, li {
+					font-size: 14rem;
+				}
+			}
+			ol {
+				li {
+					padding-left: 38rem;
+					&:before {
+						width: 26rem;
+						height: 26rem;
+					}
+					&:not(:first-child) {
+						margin-top: 20rem;
+					}
+				}
+			}
+		}
+	}
+	&__img {
+		position: relative;
+		&_small {
+			max-width: 328rem;
+		}
+		&-wrap {
+			position: absolute;
+			&:first-child {
+				width: 1300rem;
+				right: 0;
+				bottom: 100%;
+				margin-bottom: 124rem;
+			}
+			&:nth-child(2) {
+				position: absolute;
+				left: 120rem;
+				top: -540rem;
+				width: 566rem;
+			}
+		}
+		&-box {
+			width: 685rem;
+			flex-shrink: 0;
+			padding: 54rem 100rem;
+			background: #F8F5EF;
+			img {
+				mix-blend-mode: darken;
+			}
+		}
+	}
+
+	&__headline {
+		font-weight: 500;
+		font-size: 18rem;
+		line-height: 140%;
+		letter-spacing: 6rem;
+		text-transform: uppercase;
+		color: $orange;
+		margin-bottom: 20rem;
+		@include large-mobile {
+			margin-bottom: 10rem;
+			letter-spacing: 4rem;
+			font-size: 15rem;
+		}
+	}
+
+	&__hermes {
+		margin-top: 630rem;
+		background: #F8F5EF;
+		position: relative;
+		padding: 124rem 0 77rem 0;
+		.btn {
+			margin-top: 40rem;
+			min-width: 227rem;
+		}
+
+		@include large-mobile {
+			margin-top: 60rem;
+			padding: 60rem 0;
+			.about {
+				&__column {
+					&_right {
+						display: none;
+					}
+				}
+			}
+			.btn {
+				margin-top: 24rem;
+				min-width: 186rem;
+			}
+		}
+	}
+	&__how {
+		margin-top: 60rem;
+		.btn {
+			margin-top: 24rem;
+			min-width: 242rem;
+		}
+
+		@include small-tablet {
+			.about {
+				&__column {
+					&_left {
+						display: none;
+					}
+					&_right {
+						width: 100%;
+						padding-left: 0;
+						margin-top: 0;
+					}
+				}
+			}
+			.btn {
+				margin-top: 24rem;
+				min-width: 200rem;
+			}
+		}
+	}
+
+	&__text {
+		font-size: 16rem;
+		color: #656565;
+		line-height: 140%;
+		margin-top: 40rem;
+		font-weight: normal;
+
+		@include large-mobile {
+			font-size: 14rem;
+			margin-top: 20rem;
+			br {
+				display: none;
+			}
+		}
+	}
+	&__search {
+		padding-top: 150rem;
+		.about {
+			&__img {
+				padding-top: 45rem;
+				width: 694rem;
+				margin-left: 85rem;
+				background: #ECE9E3;
+				img {
+					mix-blend-mode: darken;
+				}
+			}
+		}
+		.btn {
+			margin-top: 40rem;
+			min-width: 182rem;
+		}
+
+		@include large-tablet {
+			.about {
+				&__img {
+					width: 520rem;
+					margin-left: 0;
+				}
+			}
+		}
+		@include large-mobile {
+			padding-top: 80rem;
+			.about {
+				&__column {
+					&_left {
+						order: 2;
+						margin-top: 30rem;
+					}
+					&_right {
+						order: 1;
+						margin-top: 0;
+					}
+				}
+				&__img {
+					width: auto;
+					padding-top: 0;
+				}
+			}
+			.btn {
+				margin-top: 24rem;
+			}
+		}
+	}
+}

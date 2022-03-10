@@ -12,15 +12,28 @@ q.content ul,
 	font-weight: bold;
 }
 
-.content p, ul, ol {
-	&:not(:first-child) {
-		margin-top: 25rem;
+.content {
+	p, ul, ol, li {
+		&:not(:first-child) {
+			margin-top: 28rem;
+		}
+		span {
+			font-weight: normal;
+		}
 	}
 
 	@include large-mobile {
-		&:not(:first-child) {
-			margin-top: 15rem;
+		p, ul, ol, li {
+			&:not(:first-child) {
+				margin-top: 16rem;
+			}
 		}
+	}
+}
+
+.content {
+	ol {
+		margin-left: 28rem;
 	}
 }
 
