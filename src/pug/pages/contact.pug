@@ -1,0 +1,67 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Contacts';
+
+block content
+	.wrap
+		+b.breadcrumbs
+			+e.UL.list.flex._center
+				+e.LI.item
+					+e.A.link(href="#") Главная
+				+e.LI.item Контакты
+	+b.SECTION.contacts
+		+e.wrap.wrap
+			+e.H1.title контакты
+			+e.desc
+				span МЫ ВСЕГДА
+				span НА СВЯЗИ
+			+e.list.flex
+				+e.item
+					+e.item-label Адрес:
+					+e.item-text
+						| Москва, Коробейников 
+						br
+						| переулок., д.1
+				+e.item
+					+e.item-label Телефон:
+					+e.item-text
+						a(href="tel:+79859244152") +7 (985) 924-41-52
+						br
+						a(href="tel:+79151555557") +7 (915) 155-55-57
+				+e.item
+					+e.item-label Режим работы:
+					+e.item-text
+						| Пн.-Пт.: 10:00-19:00 
+						br
+						| Сб.: 10:00-17:00
+						br
+						| Вс.: выходной
+				+e.item
+					+e.item-label Email:
+					+e.item-text
+						a(href="mailto:zakaz@sumki-hermes.ru") zakaz@sumki-hermes.ru
+	+b.map.js-map#map
+
+	+b.contact-form
+		+e.wrap.wrap
+			+e.head
+				+e.H2.title.h3 Напишите нам
+				+e.desc Есть вопросы? Пишите нам, и мы  быстро ответим.
+			+e.FORM.inner(action="/app/mail")
+				+e.row.flex
+					+e.column._left
+						+field(name="name" placeholder="Ваше имя")
+						+e.field.field__.js-field
+							+e.INPUT.input._hidden(placeholder="Ваше телефон" name="phone" type="tel" autocomplete="off")
+							+e.INPUT.input._hidden(placeholder="Ваше email" name="email" type="email")
+							+e.bottom.flex
+								+e.A.link.js-change-email(data-show="Хочу указать Email" data-hide="Хочу указать телефон")
+					+e.column._right
+						+e.field.field__
+							+e.TEXTAREA.input._textarea(placeholder="Задайте ваш вопрос")
+						+e.LABEL.checkbox.checkbox__
+							+e.INPUT.input(type="checkbox" checked)
+							+e.icon
+							+e.text Я согласен с Правилами обработки и хранения персональных данных.
+						+btn(false) Отправить

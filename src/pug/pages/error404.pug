@@ -1,0 +1,18 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Error 404';
+
+block content
+	+b.SECTION.error404
+		+e.wrap.wrap
+			+e.img._left
+				img(src="/img/error404__img1.png")
+			+e.img._right
+				img(src="/img/error404__img2.png")
+			+e.content
+				+e.H1.title 404
+				+e.desc.h3 Ой, произошла ошибка
+				+e.text Такая страница не найдена, или не существует.
+				+btn(href="/home.html") На главную
+			

@@ -1,0 +1,81 @@
+.error404 {
+	padding: 120rem 0 40rem 0;
+	text-align: center;
+	overflow: hidden;
+
+	@include large-mobile {
+		padding: 60rem 0 20rem 0;
+	}
+
+	&__title {
+		font-family: 'Forum';
+		font-style: normal;
+		font-weight: normal;
+		font-size: 288rem;
+		line-height: 90%;
+		@include large-mobile {
+			font-size: 160rem;
+		}
+	}
+	&__desc {
+		margin-top: 20rem;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		@include large-mobile {
+			margin-top: 15rem;
+		}
+	}
+	&__text {
+		margin-top: 20rem;
+		@include large-mobile {
+			margin-top: 15rem;
+		}
+	}
+	&__btn {
+		min-width: 210rem;
+		margin-top: 60rem;
+		@include large-mobile {
+			margin-top: 30rem;
+		}
+	}
+
+	&__content {
+		position: relative;
+	}
+
+	&__img {
+		position: absolute;
+		top: 0;
+		pointer-events: none;
+		width: 481rem;
+		&_left {
+			right: 100%;
+			margin-right: -100rem;
+		}
+		&_right {
+			left: 100%;
+			margin-left: -100rem;
+		}
+
+		@include mackbook {
+			&_left {
+				margin-right: -280rem;
+			}
+			&_right {
+				margin-left: -280rem;
+			}
+		}
+		@include large-tablet {
+			&_left {
+				margin-right: -260rem;
+			}
+			&_right {
+				margin-left: -260rem;
+			}
+		}
+
+		@include small-tablet {
+			display: none;
+		}
+	}
+}

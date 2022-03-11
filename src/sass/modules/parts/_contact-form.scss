@@ -1,0 +1,57 @@
+.contact-form {
+	margin-top: 60rem;
+	background: #F8F5EF;
+	padding: 60rem 0;
+
+	&__inner {
+		margin: 0 auto;
+		max-width: 1160rem;
+		padding-top: 36rem;
+		@include large-mobile {
+			padding-top: 10rem;
+		}
+	}
+	&__head {
+		text-align: center;
+	}
+	&__title {
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+	}
+	&__desc {
+		margin-top: 20rem;
+	}
+	&__field {
+		margin-top: 24rem;
+		.field__input_textarea {
+			height: 144rem;
+		}
+
+		@include large-mobile {
+			margin-top: 20rem;
+		}
+	}
+	&__row {
+		margin: 0 -15rem;
+	}
+	&__column {
+		padding: 0 15rem;
+		&_left {
+			width: 40%;
+		}
+		&_right {
+			width: 60%;
+		}
+
+		@include large-mobile {
+			width: 100%;
+		}
+	}
+	&__checkbox {
+		margin-top: 12rem;
+	}
+	&__btn {
+		margin-top: 30rem;
+		min-width: 208rem;
+	}
+}

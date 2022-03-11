@@ -82,11 +82,12 @@
 	&__bottom {
 		margin-top: 12rem;
 		@include large-mobile {
-			margin-top: 5rem;
+			margin-top: 8rem;
 		}
 	}
 	&__link {
 		font-size: 16rem;
+		line-height: 120%;
 		font-weight: normal;
 		transition: ease .2s;
 		cursor: pointer;

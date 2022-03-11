@@ -1,0 +1,108 @@
+.contacts {
+	margin-top: 60rem;
+	padding-bottom: 120rem;
+	@include large-mobile {
+		margin-top: 30rem;
+		padding-bottom: 50rem;
+	}
+	&__title {
+		font-weight: 500;
+		letter-spacing: 6rem;
+		text-transform: uppercase;
+		font-size: 18rem;
+		color: $orange;
+
+		@include large-mobile {
+			letter-spacing: 2rem;
+			font-size: 16rem;
+		}
+	}
+	&__desc {
+		margin-top: 20rem;
+		line-height: 90%;
+		font-weight: normal;
+		font-size: 144rem;
+		font-family: 'Forum';
+		margin-left: -5rem;
+		span {
+			display: block;
+			&:nth-child(2) {
+				margin-left: 355rem;
+				margin-top: 20rem;
+			}
+		}
+
+		@include small-tablet {
+			font-size: 100rem;
+			span {
+				&:nth-child(2) {
+					margin-left: 240rem;
+				}
+			}
+		}
+
+		@include large-mobile {
+			font-size: 42rem;
+			span {
+				&:nth-child(2) {
+					margin-left: 73rem;
+					margin-top: 10rem;
+				}
+			}
+		}
+	}
+
+	&__list {
+		padding-top: 60rem;
+
+		@include large-tablet {
+			justify-content: space-between;
+		}
+
+		@include large-mobile {
+			padding-top: 10rem;
+		}
+	}
+	&__item {
+		width: 262rem;
+		margin-top: 60rem;
+		&:not(:last-child) {
+			margin-right: 96rem;
+		}
+		&-label {
+			line-height: 120%;
+			color: #7E7E7E;
+			font-weight: normal;
+			font-family: 'Forum';
+		}
+		&-text {
+			margin-top: 16rem;
+		}
+
+		@include large-tablet {
+			width: 25%;
+			max-width: 262rem;
+			&:not(:last-child) {
+				margin-right: 0;
+			}
+		}
+
+		@include small-tablet {
+			width: 50%;
+			max-width: inherit;
+		}
+
+		@include large-mobile {
+			margin-top: 30rem;
+			width: 54%;
+			padding-right: 20rem;
+			&:nth-child(even) {
+				width: 46%;
+			}
+			&-text {
+				margin-top: 12rem;
+				padding-right: 0;
+			}
+		}
+	}
+}
