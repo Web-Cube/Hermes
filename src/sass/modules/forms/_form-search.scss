@@ -10,6 +10,11 @@
 		background: none;
 		border: 0;
 		cursor: pointer;
+		@include large-mobile {
+			left: 20px;
+			top: 50%;
+			margin-top: -10rem;
+		}
 	}
 
 	&__input {
@@ -27,6 +32,40 @@
 		&:focus {
 			width: 220rem;
 			border-bottom: 1px solid $black;
+		}
+		@include large-mobile {
+			height: 100%;
+			position: absolute;
+			border-bottom: 0!important;
+			width: calc( 100% - 75px )!important;
+			left: 20px;
+		}
+	}
+
+	&__close {
+		width: 30rem;
+		height: 30rem;
+		transition: ease .3s;
+		position: relative;
+		z-index: 2;
+		position: absolute;
+		right: 20px;
+		top: 50%;
+		margin-top: -15rem;
+		&-line {
+			height: 2px;
+			width: 22rem;
+			background: $black;
+			transition: ease .3s;
+			position: absolute;
+			top: 15rem;
+			left: 5rem;
+			&:first-child {
+				transform: rotate(45deg);
+			}
+			&:last-child {
+				transform: rotate(-45deg);
+			}
 		}
 	}
 }

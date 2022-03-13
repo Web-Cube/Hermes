@@ -31,7 +31,18 @@ var defaults = {
 		    if (!target.closest('.js-select')) { // если этот элемент или его родительские элементы не окно навигации и не кнопка
 		      select.removeClass('is-active') // то закрываем окно навигации, удаляя активный класс
 		    }
-		})
+		});
+
+		$('.js-show-search').click(function(){
+			$('.js-search').addClass('is-active');
+			setTimeout(function(){
+				$('.js-search .form-search__input').focus();
+			},100);
+		});
+
+		$('.js-close-search').click(function(){
+			$('.js-search').removeClass('is-active');
+		});
 	},
 
 	toggleMobile: (e) => {

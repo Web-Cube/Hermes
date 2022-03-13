@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <title>News</title>
-    <link rel="stylesheet" href="/app/css/app.css?v=1647016657003">
+    <link rel="stylesheet" href="/app/css/app.css?v=1647165551029">
     <script>
         function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
     </script>
@@ -18,7 +18,7 @@
             <div class="header__top">
                 <div class="header__row flex flex_vertical flex_justify">
                     <div class="header__column header__column_left flex flex_vertical"><a class="header__email color-gray" href="mailto:zakaz@sumki-hermes.ru">zakaz@sumki-hermes.ru</a>
-                        <div class="header__select select select_default js-select">
+                        <div class="header__select select select_default desktop js-select">
                             <input class="js-select-input" name="currency" value="Рубли" type="hidden">
                             <div class="select__head js-select-head">
                                 <div class="select__title">
@@ -65,7 +65,66 @@
                             <img src="/app/img/logo.svg">
                         </a>
                     </div>
-                    <div class="header__column header__column_right flex flex_right"><a class="header__phone" href="tel:+74959244152"><span class="header__phone-icon"><svg viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg"><path d="M19.8098 4.16569C17.7198 2.14539 14.9698 1.00415 12.0411 1.00415C3.63538 1.00415 -1.64272 10.1111 2.55465 17.3554L1 23.0039L6.80701 21.4896C9.33698 22.8563 11.4095 22.7353 12.0466 22.816C21.7934 22.816 26.6453 11.0241 19.796 4.20144L19.8098 4.16569Z" fill="#AFAFAE"></path><path d="M12.0613 20.9423L12.0558 20.9414H12.0411C9.12429 20.9414 7.26073 19.56 7.0774 19.4802L3.63995 20.374L4.56118 17.0328L4.3421 16.689C3.43461 15.2444 2.95245 13.5806 2.95245 11.8674C2.95245 3.80725 12.8019 -0.223279 18.5017 5.47373C24.1877 11.1112 20.1957 20.9423 12.0613 20.9423Z" fill="#ECE9E3"></path><path d="M17.0473 14.1186L17.0391 14.1873C16.7632 14.0498 15.4194 13.3926 15.1691 13.3018C14.6072 13.0937 14.7658 13.2688 13.6869 14.5045C13.5265 14.6832 13.367 14.697 13.0947 14.5732C12.8197 14.4357 11.937 14.147 10.892 13.212C10.078 12.4832 9.53169 11.5895 9.37036 11.3145C9.10178 10.8507 9.66369 10.7847 10.1752 9.8167C10.2668 9.6242 10.2201 9.47295 10.1523 9.33637C10.0835 9.19887 9.53627 7.85139 9.30711 7.31423C9.08711 6.7789 8.8607 6.84673 8.69112 6.84673C8.16312 6.8009 7.77721 6.80823 7.43713 7.16206C5.95765 8.78821 6.33073 10.4657 7.59663 12.2495C10.0844 15.5055 11.4099 16.105 13.8336 16.9373C14.488 17.1454 15.0848 17.116 15.5569 17.0482C16.083 16.9648 17.1766 16.3873 17.4048 15.741C17.6386 15.0948 17.6386 14.5586 17.5698 14.4348C17.502 14.3111 17.3223 14.2423 17.0473 14.1186Z" fill="#AFAFAE"></path></svg></span><span class="header__phone-text">+7 495 924 41 52</span></a>
+                    <div class="header__column header__column_right flex flex_vertical flex_right">
+                        <div></div>
+                        <div class="header__select select select_default mobile js-select">
+                            <input class="js-select-input" name="currency" value="Рубли" type="hidden">
+                            <div class="select__head js-select-head">
+                                <div class="select__title">
+                                    <div class="select__label js-select-label">Рубли</div>
+                                </div>
+                                <div class="select__arrow">
+                                    <svg class="icon icon-dropDown" viewBox="0 0 20 20">
+                                        <use xlink:href="/app/icons/sprite.svg#dropDown"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="select__body select__body_small">
+                                <div class="select__list">
+                                    <div class="select__item js-select-item is-active" data-value="Рубли">
+                                        <div class="select__item-text">Рубли</div>
+                                        <div class="select__item-icon">
+                                            <svg class="icon icon-check" viewBox="0 0 24 24">
+                                                <use xlink:href="/app/icons/sprite.svg#check"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="select__item js-select-item" data-value="Доллары">
+                                        <div class="select__item-text">Доллары</div>
+                                        <div class="select__item-icon">
+                                            <svg class="icon icon-check" viewBox="0 0 24 24">
+                                                <use xlink:href="/app/icons/sprite.svg#check"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="select__item js-select-item" data-value="Евро">
+                                        <div class="select__item-text">Евро</div>
+                                        <div class="select__item-icon">
+                                            <svg class="icon icon-check" viewBox="0 0 24 24">
+                                                <use xlink:href="/app/icons/sprite.svg#check"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <label class="header__search-btn mobile js-show-search" for="search">
+                            <svg class="icon icon-search" viewBox="0 0 20 20">
+                                <use xlink:href="/app/icons/sprite.svg#search"></use>
+                            </svg>
+                        </label>
+                        <form class="header__search form-search mobile js-search" action="">
+                            <button class="form-search__btn">
+                                <svg class="icon icon-search" viewBox="0 0 20 20">
+                                    <use xlink:href="/app/icons/sprite.svg#search"></use>
+                                </svg>
+                            </button>
+                            <input class="form-search__input" placeholder="Поиск" name="search" id="search" type="text" />
+                            <div class="form-search__close js-close-search">
+                                <div class="form-search__close-line"></div>
+                                <div class="form-search__close-line"></div>
+                            </div>
+                        </form><a class="header__phone" href="tel:+74959244152"><span class="header__phone-icon"><svg viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg"><path d="M19.8098 4.16569C17.7198 2.14539 14.9698 1.00415 12.0411 1.00415C3.63538 1.00415 -1.64272 10.1111 2.55465 17.3554L1 23.0039L6.80701 21.4896C9.33698 22.8563 11.4095 22.7353 12.0466 22.816C21.7934 22.816 26.6453 11.0241 19.796 4.20144L19.8098 4.16569Z" fill="#AFAFAE"></path><path d="M12.0613 20.9423L12.0558 20.9414H12.0411C9.12429 20.9414 7.26073 19.56 7.0774 19.4802L3.63995 20.374L4.56118 17.0328L4.3421 16.689C3.43461 15.2444 2.95245 13.5806 2.95245 11.8674C2.95245 3.80725 12.8019 -0.223279 18.5017 5.47373C24.1877 11.1112 20.1957 20.9423 12.0613 20.9423Z" fill="#ECE9E3"></path><path d="M17.0473 14.1186L17.0391 14.1873C16.7632 14.0498 15.4194 13.3926 15.1691 13.3018C14.6072 13.0937 14.7658 13.2688 13.6869 14.5045C13.5265 14.6832 13.367 14.697 13.0947 14.5732C12.8197 14.4357 11.937 14.147 10.892 13.212C10.078 12.4832 9.53169 11.5895 9.37036 11.3145C9.10178 10.8507 9.66369 10.7847 10.1752 9.8167C10.2668 9.6242 10.2201 9.47295 10.1523 9.33637C10.0835 9.19887 9.53627 7.85139 9.30711 7.31423C9.08711 6.7789 8.8607 6.84673 8.69112 6.84673C8.16312 6.8009 7.77721 6.80823 7.43713 7.16206C5.95765 8.78821 6.33073 10.4657 7.59663 12.2495C10.0844 15.5055 11.4099 16.105 13.8336 16.9373C14.488 17.1454 15.0848 17.116 15.5569 17.0482C16.083 16.9648 17.1766 16.3873 17.4048 15.741C17.6386 15.0948 17.6386 14.5586 17.5698 14.4348C17.502 14.3111 17.3223 14.2423 17.0473 14.1186Z" fill="#AFAFAE"></path></svg></span><span class="header__phone-text">+7 495 924 41 52</span></a>
                         <div
                         class="header__burger js-burger">
                             <div class="header__burger-line"></div>
@@ -106,6 +165,30 @@
                 </div>
             </div>
         </div>
+        </div>
+        <div class="header__mobile js-mobile">
+            <div class="header__mobile-top">
+                <ul class="header__nav">
+                    <li class="header__nav-item"><a class="header__nav-link" href="#">Каталог</a>
+                    </li>
+                    <li class="header__nav-item"><a class="header__nav-link" href="#">Услуги</a>
+                    </li>
+                    <li class="header__nav-item"><a class="header__nav-link" href="#">О компании<span class="header__nav-circle"></span></a>
+                    </li>
+                    <li class="header__nav-item"><a class="header__nav-link" href="#">Новости</a>
+                    </li>
+                    <li class="header__nav-item"><a class="header__nav-link" href="#">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header__mobile-bottom">
+                <div class="header__contact">
+                    <div class="header__contact-item"><a class="header__phone" href="tel:+74959244152"><span class="header__phone-icon"><svg viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg"><path d="M19.8098 4.16569C17.7198 2.14539 14.9698 1.00415 12.0411 1.00415C3.63538 1.00415 -1.64272 10.1111 2.55465 17.3554L1 23.0039L6.80701 21.4896C9.33698 22.8563 11.4095 22.7353 12.0466 22.816C21.7934 22.816 26.6453 11.0241 19.796 4.20144L19.8098 4.16569Z" fill="#AFAFAE"></path><path d="M12.0613 20.9423L12.0558 20.9414H12.0411C9.12429 20.9414 7.26073 19.56 7.0774 19.4802L3.63995 20.374L4.56118 17.0328L4.3421 16.689C3.43461 15.2444 2.95245 13.5806 2.95245 11.8674C2.95245 3.80725 12.8019 -0.223279 18.5017 5.47373C24.1877 11.1112 20.1957 20.9423 12.0613 20.9423Z" fill="#ECE9E3"></path><path d="M17.0473 14.1186L17.0391 14.1873C16.7632 14.0498 15.4194 13.3926 15.1691 13.3018C14.6072 13.0937 14.7658 13.2688 13.6869 14.5045C13.5265 14.6832 13.367 14.697 13.0947 14.5732C12.8197 14.4357 11.937 14.147 10.892 13.212C10.078 12.4832 9.53169 11.5895 9.37036 11.3145C9.10178 10.8507 9.66369 10.7847 10.1752 9.8167C10.2668 9.6242 10.2201 9.47295 10.1523 9.33637C10.0835 9.19887 9.53627 7.85139 9.30711 7.31423C9.08711 6.7789 8.8607 6.84673 8.69112 6.84673C8.16312 6.8009 7.77721 6.80823 7.43713 7.16206C5.95765 8.78821 6.33073 10.4657 7.59663 12.2495C10.0844 15.5055 11.4099 16.105 13.8336 16.9373C14.488 17.1454 15.0848 17.116 15.5569 17.0482C16.083 16.9648 17.1766 16.3873 17.4048 15.741C17.6386 15.0948 17.6386 14.5586 17.5698 14.4348C17.502 14.3111 17.3223 14.2423 17.0473 14.1186Z" fill="#AFAFAE"></path></svg></span><span class="header__phone-text">+7 495 924 41 52</span></a>
+                    </div>
+                    <div class="header__contact-item"><a class="header__email color-gray" href="mailto:zakaz@sumki-hermes.ru">zakaz@sumki-hermes.ru</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
     <div class="wrap">
@@ -389,7 +472,7 @@
         </form>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="/app/js/app.js?v=1647016657026"></script>
+    <script src="/app/js/app.js?v=1647165551060"></script>
 </body>
 
 </html>
