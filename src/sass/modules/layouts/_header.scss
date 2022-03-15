@@ -2,6 +2,7 @@
 	font-size: 16rem;
 	line-height: 120%;
 	font-weight: normal;
+	position: relative;
 	@include large-mobile {
 		position: -webkit-sticky;
 		position: -moz-sticky;
@@ -202,7 +203,8 @@
 	&__burger {
 		display: none;
 		width: 30rem;
-		height: 16rem;
+		height: 30rem;
+		padding-top: 6rem;
 		transition: ease .3s;
 		position: relative;
 		z-index: 2;
@@ -219,11 +221,12 @@
 		}
 
 		&.is-active {
-			padding-left: 6rem;
-			padding-top: 8rem;
 			.header__burger {
 				&-line {
 					width: 22rem;
+					position: absolute;
+					top: 15rem;
+					left: 5rem;
 					&:nth-child(2) {
 						display: none;
 					}
@@ -231,7 +234,7 @@
 						transform: rotate(45deg);
 					}
 					&:last-child {
-						margin-top: -2px;
+						margin-top: 0;
 						transform: rotate(-45deg);
 					}
 				}

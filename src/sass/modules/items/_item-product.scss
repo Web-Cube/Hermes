@@ -30,6 +30,9 @@
 					transform: scale(1.1);
 				}
 			}
+			&__stock, &__btn {
+				opacity: 1;
+			}
 		}
 	}
 
@@ -80,6 +83,8 @@
 		color: #444444;
 		line-height: 110%;
 		font-size: 12rem;
+		opacity: 0;
+		transition: ease .2s;
 
 		@include large-mobile {
 			height: 30rem;
@@ -95,6 +100,8 @@
 		bottom: 0;
 		z-index: 2;
 		min-width: 115rem;
+		opacity: 0;
+		transition: ease .2s;
 	}
 
 	&__name {

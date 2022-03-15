@@ -13,6 +13,10 @@
 	&.mfp-removing {
 		opacity: 0;
 	}
+
+	@include large-mobile {
+		background: #F8F5EF;
+	}
 }
 .mfp-counter{
 	display: none;
@@ -39,7 +43,7 @@
 		top: 0;
 		max-width: 707rem;
 		height: 100vh;
-		padding: 104rem 120rem;
+		padding: 104rem 120rem 60rem 120rem;
 		overflow-x: hidden;
 		overflow-y: auto;
 
